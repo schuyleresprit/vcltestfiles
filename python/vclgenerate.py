@@ -72,8 +72,8 @@ def process_author_files(csv_path, csv_list, geonames_username):
 	translations = {}
 	places = {}
 	countries = {}
-	languages = {}
-	genres = {}
+	#languages = {}
+	#genres = {}
 
 	for csv_name in csv_list:
 		with open(csv_path+csv_name) as csv_file:
@@ -115,52 +115,68 @@ def process_author_files(csv_path, csv_list, geonames_username):
 		with open(csv_path+csv_name) as csv_file:
 			reader = csv.reader(csv_file)
 			place_info = reader.__next__()
-			row_index = 1
+
+			row_index = 2
 
 			for row in reader:
 				place_name = row[5] + ', ' + row[6]
-			if not place_name in places:
-				place_info = {}
 
-				lat, long = get_lat_long(place_name, geonames_username)
-				place_info['Lat'] = lat
-				place_info['Long'] = long
+				if not place_name in places:
+					place_info = {}
 
-				place_id = row[7]
-				place_info['Pub_id'] = place_id
+					lat, long = get_lat_long(place_name, geonames_username)
+					place_info['Lat'] = lat
+					place_info['Long'] = long
 
-				places[place_name] = place_info
+					place_id = row[7]
+					place_info['Pub_id'] = place_id
+
+					places[place_name] = place_info
 
 #----------------------------------------------------------
 #read the rest of each csv to get the author's publications
 #----------------------------------------------------------
-			author_publications = {}
-			author_publications['Author'] = author_name
-			author_publications['Title'] = row[1]
-			author_publications['Pubdate'] = row[2]
-			author_publications['Language'] = row[3]
-			author_publications['Publisher'] = row[4]
-			author_publications['Pub_id'] = places[place_name]['Pub_id']
-			author_publications['Genre'] = row[8]
-			author_publications['Translation'] = row[9]
-			author_publications['Descriptor'] =  row[11]
-			#author_publications['EntryIndex'] = row[1]
+	for csv_name in csv_list:
+		with open(csv_path+csv_name) as csv_file:
+			reader = csv.reader(csv_file)
+			#reader = csv.DictReader(csv_file)
 
+			#row2 = next(reader)
+			#author_publications = reader.__next__()
 
-			#publications[author_id].append(author_publications)
-			row_index += 1
+			row_index = 2
+			for row in reader:
+				#print(row)
 
-			title = author_publications['Title']
+				author_publications = {}
+				author_publications['Author'] = row[0]
+				author_publications['Title'] = row[1]
+				author_publications['Pubdate'] = row[2]
+				author_publications['Language'] = row[3]
+				author_publications['Publisher'] = row[4]
+				author_publications['Pub_id'] = places[place_name]['Pub_id']
+				author_publications['Genre'] = row[8]
+				author_publications['Translation'] = row[9]
+				author_publications['Descriptor'] =  row[11]
+				author_publications['EntryIndex'] = row[row_index]
 
-			language_id = author_publications['Language']
-			languages = language_id
+				#publications[author_id].append(author_publications)
+				row_index += 1
 
-			genre_id = author_publications['Genre']
-			genres = author_id + title + genre_id
+				#title = author_publications['Title']
 
+				#language_id = author_publications['Language']
+				#languages = language_id
+
+				#genre_id = author_publications['Genre']
+				#genres = author_id + title + genre_id
+
+		print(author_ids)
+		print(author_publications)
 		csv_file.close()
 
-	return author_ids, author_publications, places, countries, languages, genres
+
+	return author_ids, author_publications, places, countries#, languages, genres
 
 #------------------------------------------------------------------------------
 #get language data
@@ -187,13 +203,15 @@ def make_year(date):
 # Returns the dictionary for the bibliographies json
 #for each author, return a list of all titles and dates
 #------------------------------------------------------------------------
-def get_bibliographies(author_id, author_publications):
+def get_bibliographies(author_ids, author_publications):
 	publisher = author_publications['Publisher']
 	pubdate = author_publications['Pubdate']
 	date = make_year(pubdate)
 	book = author_publications['Title']
 	bibliographies = (book, date, publisher)
-	for author_id in author_publications:
+	print(author_ids)
+	print(author_publications)
+	for author_ids in author_publications:
 
 	#for author_id in author_publications:
 
@@ -214,7 +232,8 @@ def get_translations(author_ids, author_publications):
 # Function calls
 # ---------------
 csv_list = get_csv_list(CSV_LOCATION)
-author_ids, author_publications, places, countries, languages, genres = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
+author_ids, author_publications, places, countries = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
+#languages, genres
 publications = get_bibliographies(author_ids, author_publications)
 translations = get_translations(author_ids, author_publications)
 
