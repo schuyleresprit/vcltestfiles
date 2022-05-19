@@ -1,0 +1,17 @@
+{
+    "Brooklyn, NY, United States": {
+        "Lat": 40.6501,
+        "Long": -73.94958,
+        "Pub_id": "brooklyn_ny_united_states"
+    },
+    "London, England": {
+        "Lat": 51.50853,
+        "Long": -0.12574,
+        "Pub_id": "london__england"
+    },
+    "Port-au-Prince, Haiti": {
+        "Lat": 18.54349,
+        "Long": -72.33881,
+        "Pub_id": "port_au_prince_haiti"
+    }
+}

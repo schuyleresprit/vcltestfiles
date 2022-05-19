@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>TEST Visualizing Caribbean Literature</title>
+
+	<!-- stylesheets -->
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+	<link rel='stylesheet' type='text/css' href='css/d3.slider.css' />
+
+	<!-- local -->
+	<script type='text/javascript' src='js/libs/d3.v3.min.js'></script>
+	<script type='text/javascript' src='js/libs/topojson.js'></script>
+	<script type='text/javascript' src='js/libs/d3.slider.js'></script>
+	<script type='text/javascript' src='js/libs/d3-collection.v1.min.js'></script>
+</head>
+<body>
+
+    <div id='nav_top'>
+        <div id='title' class='float'>
+            <span>Visualizing Caribbean Literature</span>
+        </div>
+        <div id='_01' class='tab float selected'><span>Places</span></div>
+        <div id='_02' class='tab float'><span>Publications</span></div>
+				<div id='_03' class='tab float'<span>Genres</span></div>
+        <div id='date_display' class='tab float _01'><span class='b'>SELECTED RANGE</span><span id='date_start'></span><span>&nbsp;&ndash;&nbsp;</span><span id='date_end'></span></div>
+    </div>
+
+	<div class='_01'>
+		<div id='sidebar' class='control'>
+			<div id='sidebar_01' class='sidebar_tab selected'><span>Places</span></div>
+			<div id='sidebar_02' class='sidebar_tab'></div>
+			<div id='sidebar_items' class='sidebar_item'><span>Genres</span></div>
+			<div id='sidebar_items' class='sidebar_item'><span>Publishers</span></div>
+			</div>
+		</div>
+		<div id='slider' class='control'>
+			<div class='slider_body'></div>
+		</div>
+	</div>
+
+    <div class='_02'>
+        <div id='publications'>
+            <div id='nav_padding'></div>
+            <div id='left_itinerary'></div>
+            <div id='right_itinerary'></div>
+        </div>
+    </div>
+		<div class='_03'>
+			<div id='genres'></div>
+			<div id='nav_padding'></div>
+		</div>
+
+	<div id='container'></div>
+	<script type='text/javascript' src='visTestvcl.js'></script>
+</body>
