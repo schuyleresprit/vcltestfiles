@@ -92,17 +92,21 @@ def process_author_files(csv_path, csv_list, geonames_username):
 #----------------------------------------------------------------
 #get author country coordinates for each author_id
 #----------------------------------------------------------------
-	lat, long = get_author_country_geo(author_country, geonames_username)
+			lat, long = get_author_country_geo(author_country, geonames_username)
 
-	country_name = author_info[2]
-	if not country_name in countries:
-		country_info = {}
-		country_info['Lat'] = lat
-		country_info['Long'] = long
-		country_id = author_info[2]
+			country_name = author_info[2]
+			#author_country = author_info[2]
+			if not country_name in countries:
+				country_info = {}
+				country_info['Lat'] = lat
+				country_info['Long'] = long
+				country_id = author_info[2]
+				#country_id = country_info['author_country']
 
-		country_info['author_country'] = country_id
-		countries[country_name] = country_info
+				country_info['author_country'] = country_id
+				countries[country_name] = country_info
+
+
 
 #--------------------------------------------------------------------
 #get Pub_id coordinates for each Pub_id
