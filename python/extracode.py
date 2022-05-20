@@ -148,3 +148,18 @@ for year in author_publications:
 
 	#publications = get_bibliographies(author_ids, author_publications)
 	#intersections = get_intersections(author_publications)
+
+		#for csv_name in csv_list:
+			#with open(csv_path+csv_name) as csv_file:
+				#reader = csv.reader(csv_file)
+				#reader = csv.DictReader(csv_file)
+
+
+				#author_publications = reader.__next__()
+
+				#row_index = 0
+				#for row in reader:
+				
+#for csv_name in csv_list:
+	#with open(csv_path+csv_name) as csv_file:
+		#reader = csv.reader(csv_file)
