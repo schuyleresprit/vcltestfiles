@@ -159,7 +159,22 @@ for year in author_publications:
 
 				#row_index = 0
 				#for row in reader:
-				
+
 #for csv_name in csv_list:
 	#with open(csv_path+csv_name) as csv_file:
 		#reader = csv.reader(csv_file)
+
+
+#------------------------------------------------------------------------------
+#get language data
+#for each author_id return a list of each title and corresponding language
+#------------------------------------------------------------------------------
+#def get_languages(author_ids, author_publications):
+	#language_id = author_publications['Language']
+	#languages = author_publications[language_id]
+	#title = author_publications['Title']
+
+	#for title in author_publications[author_ids]:
+	#for title in author_publications:
+
+		#return languages

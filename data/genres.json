@@ -1,1 +1,50 @@
-"psallfreyThe Orchid HouseFiction (Novel)"
+{
+    "": [
+        "NA"
+    ],
+    "Anthology": [
+        "Anthology"
+    ],
+    "Autobiography/Memoir": [
+        "Autobiography/Memoir"
+    ],
+    "Biography": [
+        "Biography"
+    ],
+    "Drama": [
+        "Drama"
+    ],
+    "Essay": [
+        "Essay"
+    ],
+    "Fiction (Novel)": [
+        {
+            "Author": "Phyllis Shand Allfrey",
+            "Descriptor": "",
+            "Genre": "Fiction (Novel)",
+            "Language": "English",
+            "Pub_id": "london__england",
+            "Pubdate": "1953",
+            "Publisher": "Virago Press",
+            "Title": "The Orchid House"
+        }
+    ],
+    "Fiction (Novella)": [
+        "Fiction (Novella)"
+    ],
+    "Fiction (Short Story Collection)": [
+        "Fiction (Short Story Collection)"
+    ],
+    "Nonfiction Book": [
+        "Nonfiction Book"
+    ],
+    "Poem": [
+        "Poem"
+    ],
+    "Poetry Collection": [
+        "Poetry Collection"
+    ],
+    "Short Story": [
+        "Short Story"
+    ]
+}

@@ -3,6 +3,7 @@
         {
             "Author": "Frankétienne",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "brooklyn_ny_united_states",
             "Pubdate": "2014",
@@ -12,6 +13,7 @@
         {
             "Author": "Frankétienne",
             "Descriptor": "",
+            "Genre": "",
             "Language": "French",
             "Pub_id": "la_roque_d'anthéron_france",
             "Pubdate": "2013",
@@ -21,6 +23,7 @@
         {
             "Author": "Frankétienne",
             "Descriptor": "",
+            "Genre": "",
             "Language": "French",
             "Pub_id": "la_roque_d'anthéron_france",
             "Pubdate": "2013",
@@ -30,6 +33,7 @@
         {
             "Author": "Frankétienne",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "charlottesville_va_united_states",
             "Pubdate": "2018",
@@ -39,6 +43,7 @@
         {
             "Author": "Frankétienne",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "Haitian Creole",
             "Pub_id": "port_au_prince_haiti",
             "Pubdate": "1978",
@@ -50,6 +55,7 @@
         {
             "Author": "Michael Anthony",
             "Descriptor": "",
+            "Genre": "Fiction (Short Story Collection)",
             "Language": "English",
             "Pub_id": "north_devon_england",
             "Pubdate": "1967",
@@ -59,6 +65,7 @@
         {
             "Author": "Michael Anthony",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "oxford_england",
             "Pubdate": "1996",
@@ -68,6 +75,7 @@
         {
             "Author": "Michael Anthony",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "oxford_england",
             "Pubdate": "2001",
@@ -77,6 +85,7 @@
         {
             "Author": "Michael Anthony",
             "Descriptor": "",
+            "Genre": "Fiction (Short Story Collection)",
             "Language": "English",
             "Pub_id": "kingston_jamaica",
             "Pubdate": "2007",
@@ -86,6 +95,7 @@
         {
             "Author": "Michael Anthony",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "kingston_jamaica",
             "Pubdate": "2007",
@@ -95,6 +105,7 @@
         {
             "Author": "Michael Anthony",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "port_of_spain_trinidad",
             "Pubdate": "2014",
@@ -104,6 +115,7 @@
         {
             "Author": "Michael Anthony",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "london__england",
             "Pubdate": "1967",
@@ -113,6 +125,7 @@
         {
             "Author": "Michael Anthony",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "london__england",
             "Pubdate": "1963",
@@ -124,6 +137,7 @@
         {
             "Author": "Phyllis Shand Allfrey",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "washington_united_states",
             "Pubdate": "1985",
@@ -133,6 +147,7 @@
         {
             "Author": "Phyllis Shand Allfrey",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "united_kingdom",
             "Pubdate": "1982",
@@ -142,6 +157,7 @@
         {
             "Author": "Phyllis Shand Allfrey",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "Czech",
             "Pub_id": "praha_czech_republic",
             "Pubdate": "1986",
@@ -151,6 +167,7 @@
         {
             "Author": "Phyllis Shand Allfrey",
             "Descriptor": "",
+            "Genre": "Poetry Collection",
             "Language": "English",
             "Pub_id": "trafalgar_dominica",
             "Pubdate": "2012",
@@ -160,6 +177,7 @@
         {
             "Author": "Phyllis Shand Allfrey",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "trafalgar_dominica",
             "Pubdate": "2014",
@@ -169,6 +187,7 @@
         {
             "Author": "Phyllis Shand Allfrey",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "london__england",
             "Pubdate": "1953",
@@ -180,6 +199,7 @@
         {
             "Author": "Robert Antoni",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "woodstock_ny_united_states",
             "Pubdate": "1992",
@@ -189,6 +209,7 @@
         {
             "Author": "Robert Antoni",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "woodstock_ny_united_states",
             "Pubdate": "1993",
@@ -198,6 +219,7 @@
         {
             "Author": "Robert Antoni",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "English",
             "Pub_id": "brooklyn_ny_united_states",
             "Pubdate": "2013",
@@ -207,6 +229,7 @@
         {
             "Author": "Robert Antoni",
             "Descriptor": "",
+            "Genre": "Fiction (Novel)",
             "Language": "Spanish",
             "Pub_id": "barcelona",
             "Pubdate": "2002",
@@ -216,6 +239,7 @@
         {
             "Author": "Robert Antoni",
             "Descriptor": "",
+            "Genre": "Anthology",
             "Language": "English",
             "Pub_id": "brooklyn_ny_united_states",
             "Pubdate": "2008",

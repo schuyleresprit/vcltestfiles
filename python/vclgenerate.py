@@ -73,7 +73,8 @@ def process_author_files(csv_path, csv_list, geonames_username):
 	translations = {}
 	places = {}
 	countries = {}
-	#genres = {}
+	languages = {}
+	genres = {}
 
 	for csv_name in csv_list:
 		with open(csv_path+csv_name) as csv_file:
@@ -132,7 +133,6 @@ def process_author_files(csv_path, csv_list, geonames_username):
 #----------------------------------------------------------
 #read the rest of each csv to get the author's publications
 #----------------------------------------------------------
-
 				author_publications = {}
 				author_publications ['Author'] = author_info[0]
 				author_publications['Pub_id'] = places[place_name]['Pub_id']
@@ -150,40 +150,49 @@ def process_author_files(csv_path, csv_list, geonames_username):
 #--------------------------------------------------------------------------------
 #Create a dictionary for the LANGUAGES
 #-------------------------------------------------------------------------------
+			#col_index = 4
+			#for col in reader:
 				languages = {}
-				languages['English'] = []
-				languages['French'] = []
-				languages['Spanish'] = []
-				languages['Haitian Creole'] = []
-				language_id = languages
-				publications[language_id].append(author_publications)
+				languages['English'] = ['English']
+				languages['French'] = ['French']
+				languages['Spanish'] = ['Spanish']
+				languages['Haitian Creole'] = ['Haitian Creole']
+				languages['Czech'] = ['Czech']
+				language_id = row['Language']
+				author_publications['Language'] = language_id
+				languages[language_id] = []
+				languages[language_id].append(author_publications)
+#------------------------------------------------------------------------------
+#Create a dictionary for the Genres
+#------------------------------------------------------------------------------
+			#col_index = 9
+			#for col in reader:
+				genres = {}		
+				genres['Fiction (Novel)'] = ['Fiction (Novel)']
+				genres['Fiction (Novella)'] = ['Fiction (Novella)']
+				genres['Fiction (Short Story Collection)'] = ['Fiction (Short Story Collection)']
+				genres['Drama'] = ['Drama']
+				genres['Poetry Collection'] = ['Poetry Collection']
+				genres['Short Story'] = ['Short Story']
+				genres['Poem'] = ['Poem']
+				genres['Essay'] = ['Essay']
+				genres['Nonfiction Book'] = ['Nonfiction Book']
+				genres['Biography'] = ['Biography']
+				genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
+				genres['Anthology'] = ['Anthology']
+				genres[''] = ['NA']
+				genre_id = row['Genre']
+				author_publications['Genre'] = genre_id
+				#for genre_id in author_publications:
+				genres[genre_id] = []
+				genres[genre_id].append(author_publications)
 
-				genres = {}
-				author_publications['Genre'] = row['Genre']
-				genre_id = [row['Genre']]
-				for genre_id in author_publications:
-					publications[genre_id].append(author_publications)
-
-		#print(places)
+		#print(languages)
 		#print(publications)
 		csv_file.close()
 
 
 	return author_ids, publications, places, countries, languages, genres
-
-#------------------------------------------------------------------------------
-#get language data
-#for each author_id return a list of each title and corresponding language
-#------------------------------------------------------------------------------
-#def get_languages(author_ids, author_publications):
-	#language_id = author_publications['Language']
-	#languages = author_publications[language_id]
-	#title = author_publications['Title']
-
-	#for title in author_publications[author_ids]:
-	#for title in author_publications:
-
-		#return languages
 
 #-------------------------------------------------------------------------
 # Takes a string date and returns the year version of that date
