@@ -150,8 +150,6 @@ def process_author_files(csv_path, csv_list, geonames_username):
 #--------------------------------------------------------------------------------
 #Create a dictionary for the LANGUAGES
 #-------------------------------------------------------------------------------
-			#col_index = 4
-			#for col in reader:
 				languages = {}
 				languages['English'] = ['English']
 				languages['French'] = ['French']
@@ -165,9 +163,7 @@ def process_author_files(csv_path, csv_list, geonames_username):
 #------------------------------------------------------------------------------
 #Create a dictionary for the Genres
 #------------------------------------------------------------------------------
-			#col_index = 9
-			#for col in reader:
-				genres = {}		
+				genres = {}
 				genres['Fiction (Novel)'] = ['Fiction (Novel)']
 				genres['Fiction (Novella)'] = ['Fiction (Novella)']
 				genres['Fiction (Short Story Collection)'] = ['Fiction (Short Story Collection)']
@@ -183,14 +179,10 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				genres[''] = ['NA']
 				genre_id = row['Genre']
 				author_publications['Genre'] = genre_id
-				#for genre_id in author_publications:
 				genres[genre_id] = []
 				genres[genre_id].append(author_publications)
 
-		#print(languages)
-		#print(publications)
 		csv_file.close()
-
 
 	return author_ids, publications, places, countries, languages, genres
 
