@@ -89,6 +89,8 @@ def process_author_files(csv_path, csv_list, geonames_username):
 			author_country = author_info[2]
 			author_ids[author_name] = author_id
 			publications[author_id] = []
+			#languages[language_id] = []
+			#genres[genre_id] = []
 
 #----------------------------------------------------------------
 #get author country coordinates for each author_id
@@ -137,14 +139,25 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				author_publications['Pubdate'] = row['Pubdate']
 				author_publications['Language'] = row['Language']
 				author_publications['Publisher'] = row['Publisher']
+				author_publications['Genre'] = row['Genre']
 				author_publications['Descriptor'] =  row['Descriptor']
 
 				publication_id = row['Title']
 				author_publications['Title'] = publication_id
 				publications[author_id].append(author_publications)
+
+
 #--------------------------------------------------------------------------------
 #Create a dictionary for the LANGUAGES
 #-------------------------------------------------------------------------------
+	for csv_name in csv_list:
+		with open(csv_path+csv_name) as csv_file:
+			reader = csv.reader(csv_file)
+			for row in reader:
+
+				language_id = author_publications['Language']
+			#language_id = reader.__next__()
+
 				languages = {}
 				languages['English'] = ['English']
 				languages['French'] = ['French']
@@ -152,13 +165,28 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				languages['Haitian Creole'] = ['Haitian Creole']
 				languages['Czech'] = ['Czech']
 
-				language_id = row['Language']
-				author_publications['Language'] = language_id
-				languages[language_id] = []
-				languages[language_id].append(author_publications)
+				language_id = []
+				#author_publications['Language'] = language_id
+
+				for language_id in languages:
+				#languages[language_id] = []
+				#if language_id in languages.language_id():
+
+					languages[language_id].append(publications)
+
+			#row = reader.__next__()
 #------------------------------------------------------------------------------
 #Create a dictionary for the Genres
 #------------------------------------------------------------------------------
+	for csv_name in csv_list:
+		with open(csv_path+csv_name) as csv_file:
+			reader = csv.reader(csv_file)
+
+			for row in reader:
+
+				genre_id = author_publications['Genre']
+				#genre_id = reader.__next__()
+
 				genres = {}
 				genres['Fiction (Novel)'] = ['Fiction (Novel)']
 				genres['Fiction (Novella)'] = ['Fiction (Novella)']
@@ -167,21 +195,22 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				genres['Poetry Collection'] = ['Poetry Collection']
 				genres['Short Story'] = ['Short Story']
 				genres['Poem'] = ['Poem']
-				genres['Essay'] = ['Essay']
 				genres['Nonfiction Book'] = ['Nonfiction Book']
 				genres['Biography'] = ['Biography']
 				genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
 				genres['Anthology'] = ['Anthology']
 				genres[''] = ['NA']
 
-				genre_id = row['Genre']
+				genre_id = []
 				author_publications['Genre'] = genre_id
-				genres[genre_id] = []
-				genres[genre_id].append(author_publications)
 
-		csv_file.close()
+				for genre_id in genres:
+				#genres[genre_id] = []
+					genres[genre_id].append(publications)
 
-	return author_ids, publications, places, countries, languages, genres
+			csv_file.close()
+
+		return author_ids, publications, places, countries, languages, genres
 
 #-------------------------------------------------------------------------
 # Takes a string date and returns the year version of that date
@@ -211,7 +240,8 @@ def make_year(date):
 #---------------------------------------------------------------------------
 #get the translated title from the llst by author_id
 #---------------------------------------------------------------------------
-def get_translations(author_publications, publications):
+def get_translations(languages, publications):
+		author_publications = {}
 		author_publications['Translation'] = ['Translation']
 		publication_id = ['Title']
 		translation = set(author_publications['Translation'])
@@ -227,7 +257,9 @@ csv_list = get_csv_list(CSV_LOCATION)
 author_ids, publications, places, countries,languages, genres = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
 
 #bibliographies = get_bibliographies(author_ids,publications)
-translations = get_translations(author_ids, publications)
+#languages = get_languages(author_ids, publications)
+#genres = get_genres(author_ids, publications)
+translations = get_translations(languages, publications)
 
 with codecs.open(AUTHOR_ID_JSON, 'w', 'utf8') as f:
 	f.write(json.dumps(author_ids, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
