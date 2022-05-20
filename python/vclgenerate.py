@@ -96,14 +96,11 @@ def process_author_files(csv_path, csv_list, geonames_username):
 			lat, long = get_author_country_geo(author_country, geonames_username)
 
 			country_name = author_info[2]
-			#author_country = author_info[2]
 			if not country_name in countries:
 				country_info = {}
 				country_info['Lat'] = lat
 				country_info['Long'] = long
 				country_id = author_info[2]
-				#country_id = country_info['author_country']
-
 				country_info['author_country'] = country_id
 				countries[country_name] = country_info
 
@@ -146,7 +143,6 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				publication_id = row['Title']
 				author_publications['Title'] = publication_id
 				publications[author_id].append(author_publications)
-				#title = author_publications['Title']
 #--------------------------------------------------------------------------------
 #Create a dictionary for the LANGUAGES
 #-------------------------------------------------------------------------------
@@ -219,10 +215,8 @@ def get_translations(author_publications, publications):
 		publication_id = ['Title']
 		translation = set(author_publications['Translation'])
 		title = [publication_id]
-	#title = set(author_publications['Title'])
 		for title in publications:
 			if ['Translation'] == 'y':
-				print(translation)
 				return translation
 
 # ---------------
