@@ -133,7 +133,6 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				author_publications = {}
 				author_publications ['Author'] = author_info[0]
 				author_publications['Pub_id'] = places[place_name]['Pub_id']
-				#author_publications['EntryIndex'] = row_index
 				author_publications['Title'] = row['Title']
 				author_publications['Pubdate'] = row['Pubdate']
 				author_publications['Language'] = row['Language']
@@ -152,6 +151,7 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				languages['Spanish'] = ['Spanish']
 				languages['Haitian Creole'] = ['Haitian Creole']
 				languages['Czech'] = ['Czech']
+
 				language_id = row['Language']
 				author_publications['Language'] = language_id
 				languages[language_id] = []
@@ -173,6 +173,7 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
 				genres['Anthology'] = ['Anthology']
 				genres[''] = ['NA']
+
 				genre_id = row['Genre']
 				author_publications['Genre'] = genre_id
 				genres[genre_id] = []
