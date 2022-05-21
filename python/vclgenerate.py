@@ -69,7 +69,7 @@ def get_author_country_geo(author_country, geonames_username):
 def process_author_files(csv_path, csv_list, geonames_username):
 	author_ids = {}
 	publications = {}
-	bibliographies = {}
+	#timeline = {}
 	translations = {}
 	places = {}
 	countries = {}
@@ -153,25 +153,23 @@ def process_author_files(csv_path, csv_list, geonames_username):
 	for csv_name in csv_list:
 		with open(csv_path+csv_name) as csv_file:
 			reader = csv.reader(csv_file)
+
 			for row in reader:
 
-				language_id = author_publications['Language']
 			#language_id = reader.__next__()
-
 				languages = {}
 				languages['English'] = ['English']
 				languages['French'] = ['French']
 				languages['Spanish'] = ['Spanish']
 				languages['Haitian Creole'] = ['Haitian Creole']
 				languages['Czech'] = ['Czech']
-
 				language_id = []
-				#author_publications['Language'] = language_id
 
+				#language_id == ['']
+				#for language_id in languages:
 				for language_id in languages:
-				#languages[language_id] = []
-				#if language_id in languages.language_id():
-
+				#publications.values()
+					#filter(language_id, publications)
 					languages[language_id].append(publications)
 
 			#row = reader.__next__()
@@ -184,8 +182,8 @@ def process_author_files(csv_path, csv_list, geonames_username):
 
 			for row in reader:
 
-				genre_id = author_publications['Genre']
-				#genre_id = reader.__next__()
+				genres = author_publications['Genre']
+			#genre_id = reader.__next__()
 
 				genres = {}
 				genres['Fiction (Novel)'] = ['Fiction (Novel)']
@@ -200,42 +198,18 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
 				genres['Anthology'] = ['Anthology']
 				genres[''] = ['NA']
-
 				genre_id = []
-				author_publications['Genre'] = genre_id
+				genre_id == ['']
+				#author_publications['Genre'] = genre_id
 
 				for genre_id in genres:
+				#if genre_id in genres:
 				#genres[genre_id] = []
 					genres[genre_id].append(publications)
 
 			csv_file.close()
 
 		return author_ids, publications, places, countries, languages, genres
-
-#-------------------------------------------------------------------------
-# Takes a string date and returns the year version of that date
-#-------------------------------------------------------------------------
-def make_year(date):
-	pd.to_datetime(author_publications['Pubdate'])
-	return date
-
-#-------------------------------------------------------------------------
-# Returns the dictionary for the bibliographies json
-#for each author, return a list of all titles and dates
-#------------------------------------------------------------------------
-#def get_bibliographies(author_ids, author_publications):
-	#publisher = row['Publisher']
-	#pubdate = row['Pubdate']
-	#date = make_year(pubdate)
-	#book = row['Title']
-	#bibliographies = (book, date, publisher)
-
-	#print(author_publications)
-	#for author_ids in publications:
-
-	#for author_id in author_publications:
-
-		#return bibliographies
 
 #---------------------------------------------------------------------------
 #get the translated title from the llst by author_id
@@ -256,7 +230,7 @@ def get_translations(languages, publications):
 csv_list = get_csv_list(CSV_LOCATION)
 author_ids, publications, places, countries,languages, genres = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
 
-#bibliographies = get_bibliographies(author_ids,publications)
+#timeline = get_timeline(publications, places)
 #languages = get_languages(author_ids, publications)
 #genres = get_genres(author_ids, publications)
 translations = get_translations(languages, publications)
@@ -282,7 +256,7 @@ with codecs.open(GENRES_JSON, 'w', 'utf8') as f:
 	f.close()
 
 #with codecs.open(BIBLIOGRAPHIES_JSON, 'w', 'utf8') as f:
-	#f.write(json.dumps(bibliographies, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
+	#f.write(json.dumps(timeline, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
 	#f.close()
 
 with codecs.open(AUTHOR_PUBLICATIONS_JSON, 'w', 'utf8') as f:
