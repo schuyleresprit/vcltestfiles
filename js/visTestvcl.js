@@ -7,6 +7,7 @@ class CreateMap {
 		this.genres = {};
 		this.countries = {};
 		this.publishers ={};
+		this.publications = {}
 		this.authors = {};  // {author_id: author_name}
         this.author_names = {}; // {author_name: author_id}
 		this.continents = {};
@@ -45,7 +46,7 @@ class CreateMap {
 
 	get_data(){
 		var self = this;
-		var datasets = ['author_ids','genres','places','countries','languages','continents'];
+		var datasets = ['author_ids','publications','genres','places','countries','languages','continents'];
 
 		datasets.forEach(function(d){ self.loading.push(d); });
 		datasets.forEach(function(d){

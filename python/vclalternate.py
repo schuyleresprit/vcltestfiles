@@ -68,13 +68,12 @@ def get_author_country_geo(author_country, geonames_username):
 #-------------------------------------------------------------------------
 def process_author_files(csv_path, csv_list, geonames_username):
 	author_ids = {}
-	publications = {}
-	#timeline = {}
-	translations = {}
-	places = {}
 	countries = {}
-	languages = {}
-	genres = {}
+	places = {}
+	publications = {}
+	#languages = {}
+	#genres = {}
+	#translations = {}
 
 	for csv_name in csv_list:
 		with open(csv_path+csv_name) as csv_file:
@@ -139,100 +138,131 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				author_publications['Language'] = row['Language']
 				author_publications['Publisher'] = row['Publisher']
 				author_publications['Genre'] = row['Genre']
+				author_publications['Translation'] = row['Translation']
 				author_publications['Descriptor'] =  row['Descriptor']
-
+				#date = row['Pubdate']
 				publication_id = row['Title']
 				author_publications['Title'] = publication_id
 				publications[author_id].append(author_publications)
-
-
-#--------------------------------------------------------------------------------
-#Create a dictionary for the LANGUAGES
-#-------------------------------------------------------------------------------
-	for csv_name in csv_list:
-		with open(csv_path+csv_name) as csv_file:
-			reader = csv.reader(csv_file)
-
-			for row in reader:
-
-			#language_id = reader.__next__()
-				languages = {}
-				languages['English'] = ['English']
-				languages['French'] = ['French']
-				languages['Spanish'] = ['Spanish']
-				languages['Haitian Creole'] = ['Haitian Creole']
-				languages['Czech'] = ['Czech']
-				language_id = []
-
-				#language_id == ['']
-				#for language_id in languages:
-				for language_id in languages:
-				#publications.values()
-					#filter(language_id, publications)
-					languages[language_id].append(publications)
-
-			#row = reader.__next__()
-#------------------------------------------------------------------------------
-#Create a dictionary for the Genres
-#------------------------------------------------------------------------------
-	for csv_name in csv_list:
-		with open(csv_path+csv_name) as csv_file:
-			reader = csv.reader(csv_file)
-
-			for row in reader:
-
-				genres = author_publications['Genre']
-			#genre_id = reader.__next__()
-
-				genres = {}
-				genres['Fiction (Novel)'] = ['Fiction (Novel)']
-				genres['Fiction (Novella)'] = ['Fiction (Novella)']
-				genres['Fiction (Short Story Collection)'] = ['Fiction (Short Story Collection)']
-				genres['Drama'] = ['Drama']
-				genres['Poetry Collection'] = ['Poetry Collection']
-				genres['Short Story'] = ['Short Story']
-				genres['Poem'] = ['Poem']
-				genres['Nonfiction Book'] = ['Nonfiction Book']
-				genres['Biography'] = ['Biography']
-				genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
-				genres['Anthology'] = ['Anthology']
-				genres[''] = ['NA']
-				genre_id = []
-				genre_id == ['']
-				#author_publications['Genre'] = genre_id
-
-				for genre_id in genres:
-				#if genre_id in genres:
-				#genres[genre_id] = []
-					genres[genre_id].append(publications)
-
+				#row_index += 1
 			csv_file.close()
 
-		return author_ids, publications, places, countries, languages, genres
+		return author_ids, countries, places, publications
 
-#---------------------------------------------------------------------------
-#get the translated title from the llst by author_id
-#---------------------------------------------------------------------------
-def get_translations(languages, publications):
-		author_publications = {}
-		author_publications['Translation'] = ['Translation']
-		publication_id = ['Title']
-		translation = set(author_publications['Translation'])
-		title = [publication_id]
-		for title in publications:
-			if ['Translation'] == 'y':
-				return translation
+	#---------------------------------------------------------------------------
+	def create_date_dict(publications):
+		date = {}
+		#row_index = 1
+		#for row in reader:
+		pubdate = date
+		#earliest_date, latest_date = get_earliest_and_latest_dates(author_publications)
+		start_year = (1800)
+		end_year = (2022)
+
+		for year in range(start_year, end_year + 1):
+		#date_dict[year] = []
+			return pubdate
+
+	#--------------------------------------------------------------------------------
+	#def make_year(date):
+		#author_publications = {}
+		#pd.to_datetime(author_publications['Pubdate'])
+		#return date
+	#-------------------------------------------------------------------------
+	# Returns the earliest and latest dates in the data
+	#-------------------------------------------------------------------------
+	def get_earliest_and_latest_dates(publications):
+
+		start_dates = []
+		end_dates = []
+
+		for author_id in publications:
+			for author_publications in pubications[author_id]:
+				start_date = author_publications['Pubdate']
+				end_date = author_publications['Pubdate']
+
+				if not start_date == '': start_dates.append(start_date)
+				if not end_date == '': end_dates.append(end_date)
+
+		start_dates = sorted(start_dates)
+		end_dates = sorted(end_dates)
+
+		return start_dates[0], end_dates[len(end_dates)-1]
+
+	#--------------------------------------------------------------------------------
+	#Create a dictionary for the LANGUAGES
+	#-------------------------------------------------------------------------------
+	def get_languages(publications):
+		language_ids = []
+
+		for author_id in publications:
+			for author_publications in publications[author_id]:
+				language_id = author_publications['Language']
+
+		languages = sorted(publications[language_id])
+		return languages
+
+	#--------------------------------------------------------------------------------
+	def get_genres(publications):
+		genre_ids = []
+
+		for author_id in publications:
+			for author_publications in publications[author_id]:
+				genre_id = author_publications['Genre']
+
+		genres = sorted(publications[genre_id])
+		return genres
+
+	#-----------------------------------------------------------------------------
+	def get_translations(publications):
+		translation_ids = []
+		translations = {}
+
+		for author_id in publications:
+			for author_publications in publications[author_id]:
+				translation_id = author_publications['Translation']
+				#translation_id['y'] = ['y']
+				#translation_id['n'] = ['n']
+			for translation_id in publications:
+				for author_publications in publications[author_id]:
+					if [translation_id] == ['y']:
+						translations = sorted(publications[translation_id])
+		return translations
+					#translations[translation_id].append(publications)
+
+	#---------------------------------------------------------------------------
+	#Bibliographies by date
+	#---------------------------------------------------------------------------
+	#def get_bib_by_date(publications):
+		#bibliographies = create_date_dict(publications)
+		#pubdate = create_date_dict(publications)
+		#date = {}
+
+
+		#for pubdate in publications:
+			#for author_id in publications:
+				#start_date = pubdate
+				#end_date = pubdate
+
+				#publications['Pubdate'] = date
+				#if not start_date == '':
+				#	publications[author_id].append(bibliographies)
+				#if not start_date == end_date and not end_date == '':
+					#publications[author_id].append(bibliographies)
+
+		#return bibliographies
+	#, languages, genres, translations
 
 # ---------------
 # Function calls
 # ---------------
 csv_list = get_csv_list(CSV_LOCATION)
-author_ids, publications, places, countries,languages, genres = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
-
-#timeline = get_timeline(publications, places)
-#languages = get_languages(author_ids, publications)
-#genres = get_genres(author_ids, publications)
-translations = get_translations(languages, publications)
+author_ids, countries, places, publications = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
+#, languages, genres, translations
+#bibliographies = get_bib_by_date(publications)
+#languages = get_languages(publications)
+#genres = get_genres(publications)
+#translations = get_translations(publications)
 
 with codecs.open(AUTHOR_ID_JSON, 'w', 'utf8') as f:
 	f.write(json.dumps(author_ids, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
@@ -246,13 +276,13 @@ with codecs.open(PLACES_JSON, 'w', 'utf8') as f:
 	f.write(json.dumps(places, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
 	f.close()
 
-with codecs.open(LANGUAGES_JSON, 'w', 'utf8') as f:
-	f.write(json.dumps(languages, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
-	f.close()
+#with codecs.open(LANGUAGES_JSON, 'w', 'utf8') as f:
+	#f.write(json.dumps(languages, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
+	#f.close()
 
-with codecs.open(GENRES_JSON, 'w', 'utf8') as f:
-	f.write(json.dumps(genres, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
-	f.close()
+#with codecs.open(GENRES_JSON, 'w', 'utf8') as f:
+	#f.write(json.dumps(genres, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
+	#f.close()
 
 #with codecs.open(BIBLIOGRAPHIES_JSON, 'w', 'utf8') as f:
 	#f.write(json.dumps(timeline, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
@@ -262,6 +292,6 @@ with codecs.open(AUTHOR_PUBLICATIONS_JSON, 'w', 'utf8') as f:
 	f.write(json.dumps(publications, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
 	f.close()
 
-with codecs.open(TRANSLATIONS_JSON, 'w', 'utf8') as f:
-	f.write(json.dumps(translations, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
-	f.close()
+#with codecs.open(TRANSLATIONS_JSON, 'w', 'utf8') as f:
+	#f.write(json.dumps(translations, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
+	#f.close()
