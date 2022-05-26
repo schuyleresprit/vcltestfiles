@@ -172,16 +172,16 @@ def process_author_files(csv_path, csv_list, geonames_username):
 						languages[language_id].append(author_publications)
 						#row_index += 1
 						print(author_publications)
-						
-				with open(csv_path+csv_name) as csv_file:
-					reader = csv.reader(csv_file)
-				for i in range(2):
 
-					if not row['Genre'] in genres:
-						genres[row['Genre']] = []
-					if not row['Genre'] in publications_by_genre:
-						publications_by_genre[row['Genre']] = []
-						genres[genre_id].append(author_publications)
+	with open(csv_path+csv_name) as csv_file:
+		reader = csv.reader(csv_file)
+	for i in range(2):
+
+		if not row['Genre'] in genres:
+			genres[row['Genre']] = []
+			if not row['Genre'] in publications_by_genre:
+				publications_by_genre[row['Genre']] = []
+				genres[genre_id].append(author_publications)
 						#row_index =+ 1
 
 
