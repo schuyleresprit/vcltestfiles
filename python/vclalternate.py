@@ -146,9 +146,10 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				publications[author_id].append(author_publications)
 				#row_index += 1
 			csv_file.close()
-
+		print(publications)
 		return author_ids, countries, places, publications
 
+<<<<<<< HEAD
 #---------------------------------------------------------------------------
 def create_date_dict(publications):
 	date = {}
@@ -158,6 +159,18 @@ def create_date_dict(publications):
 	#earliest_date, latest_date = get_earliest_and_latest_dates(author_publications)
 	start_year = (1800)
 	end_year = (2022)
+=======
+	#---------------------------------------------------------------------------
+	def create_date_dict(publications):
+
+		date = {}
+		#row_index = 1
+		#for row in reader:
+		pubdate = date
+		#earliest_date, latest_date = get_earliest_and_latest_dates(author_publications)
+		start_year = (1800)
+		end_year = (2022)
+>>>>>>> a1480c33ff6abd4be38cbec6210822160939af67
 
 	for year in range(start_year, end_year + 1):
 	#date_dict[year] = []
