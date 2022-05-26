@@ -146,11 +146,12 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				publications[author_id].append(author_publications)
 				#row_index += 1
 			csv_file.close()
-
+		print(publications)
 		return author_ids, countries, places, publications
 
 	#---------------------------------------------------------------------------
 	def create_date_dict(publications):
+
 		date = {}
 		#row_index = 1
 		#for row in reader:
@@ -198,10 +199,10 @@ def get_languages(publications):
 	#for author_id in publications:
 		#print(author_id)
 	for author_publications in publications:
-		language_id = author_publications['Language']
+		language_id = author_publications[3]
 		for language_id in publications:
-			#	languages = {}
-			languages = sorted(publications[language_id])
+			languages = {}
+			languages[language_id].append(author_publications)
 			return languages
 
 	#--------------------------------------------------------------------------------
