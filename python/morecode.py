@@ -141,3 +141,49 @@ def get_timeline(author_publications, places):
             #author_publications['Language'] = language_id
             #languages[language_id] = []
             #if language_id in languages:
+
+	for csv_name in csv_list:
+		with open(csv_path+csv_name) as csv_file:
+			reader = csv.reader(csv_file)
+
+			for row in reader:
+
+				#genres = author_publications['Genre']
+			#genre_id = reader.__next__()
+
+				genres = {}
+				genres['Fiction (Novel)'] = ['Fiction (Novel)']
+				genres['Fiction (Novella)'] = ['Fiction (Novella)']
+				genres['Fiction (Short Story Collection)'] = ['Fiction (Short Story Collection)']
+				genres['Drama'] = ['Drama']
+				genres['Poetry Collection'] = ['Poetry Collection']
+				genres['Short Story'] = ['Short Story']
+				genres['Poem'] = ['Poem']
+				genres['Nonfiction Book'] = ['Nonfiction Book']
+				genres['Biography'] = ['Biography']
+				genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
+				genres['Anthology'] = ['Anthology']
+				genres[''] = ['NA']
+				#genre_id = []
+				#genre_id == ['']
+				#author_publications['Genre'] = genre_id
+
+				#for genre_id in genres:
+				#if genre_id in genres:
+				#genres[genre_id] = []
+
+
+
+								#language_id = []#reader.__next__()
+								#languages['English'] = ['English']
+								#languages['French'] = ['French']
+								#languages['Spanish'] = ['Spanish']
+								#languages['Haitian Creole'] = ['Haitian Creole']
+								#languages['Czech'] = ['Czech']
+								#language_id = []
+								#print(languages )
+								#for language_id in languages:
+								#for language_id in languages:
+									#if language_id == True:
+											#filter(publications)
+								#row_index += 1

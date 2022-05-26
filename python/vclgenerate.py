@@ -20,7 +20,7 @@ COUNTRIES_JSON = os.path.dirname(os.getcwd()) + '/data/countries.json'
 LANGUAGES_JSON = os.path.dirname(os.getcwd()) + '/data/languages.json'
 GENRES_JSON = os.path.dirname(os.getcwd()) + '/data/genres.json'
 TRANSLATIONS_JSON = os.path.dirname(os.getcwd()) + '/data/translations.json'
-AUTHOR_PUBLICATIONS_JSON = os.path.dirname(os.getcwd()) + '/data/author_publications.json'
+AUTHOR_PUBLICATIONS_JSON = os.path.dirname(os.getcwd()) + '/data/publications.json'
 GEONAMES_USERNAME = 'schuylere'
 
 # ----------
@@ -69,12 +69,12 @@ def get_author_country_geo(author_country, geonames_username):
 def process_author_files(csv_path, csv_list, geonames_username):
 	author_ids = {}
 	publications = {}
-	#timeline = {}
-	translations = {}
 	places = {}
 	countries = {}
 	languages = {}
 	genres = {}
+	#timeline = {}
+	translations = {}
 
 	for csv_name in csv_list:
 		with open(csv_path+csv_name) as csv_file:
@@ -89,8 +89,6 @@ def process_author_files(csv_path, csv_list, geonames_username):
 			author_country = author_info[2]
 			author_ids[author_name] = author_id
 			publications[author_id] = []
-			#languages[language_id] = []
-			#genres[genre_id] = []
 
 #----------------------------------------------------------------
 #get author country coordinates for each author_id
@@ -106,14 +104,13 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				country_info['author_country'] = country_id
 				countries[country_name] = country_info
 
-#--------------------------------------------------------------------
+#-------------------------------------------------------------------
 #get Pub_id coordinates for each Pub_id
 #-------------------------------------------------------------------
-
 			reader = csv.DictReader(csv_file)
 			row_index = 0
 			for row in reader:
-				author_publications = {}
+
 				if not(row['Title'] == '' and row['Pubdate'] == '' and row['Language'] == '' and row['Genre'] == ''):
 					place_name = row['Pub_city'] + ', ' + row['Pub_country']
 
@@ -132,6 +129,7 @@ def process_author_files(csv_path, csv_list, geonames_username):
 #----------------------------------------------------------
 #read the rest of each csv to get the author's publications
 #----------------------------------------------------------
+				author_publications = {}
 				author_publications['Author'] = author_info[0]
 				author_publications['Pub_id'] = places[place_name]['Pub_id']
 				author_publications['Title'] = row['Title']
@@ -153,29 +151,30 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				date_id = row['Pubdate']
 				author_publications['Pubdate'] = date_id
 
-
 				#print(author_publications)
 
 				publications[author_id].append(author_publications)
-
+				row_index += 1
 
 
 #--------------------------------------------------------------------------------
 #Create a dictionary for the LANGUAGES
 #-------------------------------------------------------------------------------
-	publications_by_language = {}
-	for csv_name in csv_list:
-		with open(csv_path+csv_name) as csv_file:
-			reader = csv.reader(csv_file)
-			for i in range(2):
-				next(reader) #Skip to data lines
+				publications_by_language = {}
+	#	for csv_name in csv_list:
+				#print(author_publications)
+				with open(csv_path+csv_name) as csv_file:
+					reader = csv.reader(csv_file)
+				for i in range(2):
+					#next(reader) #Skip to data lines
 
-			for row in reader:
-				if not row[3] in languages:
-					languages[row[3]] = []
+					#for row in reader:
+					if not row['Language'] in languages:
+						languages[row['Language']] = []
 
-				if not row[3] in publications_by_language:
-					publications_by_language[row[3]] = []
+					if not row['Language'] in publications_by_language:
+						publications_by_language[row['Language']] = []
+
 
 				#language_id = []#reader.__next__()
 				#languages['English'] = ['English']
@@ -190,12 +189,24 @@ def process_author_files(csv_path, csv_list, geonames_username):
 					#if language_id == True:
 							#filter(publications)
 				#row_index += 1
-				languages[language_id].append(author_publications)
-				#print(languages)
-
+						languages[language_id].append(author_publications)
+						#row_index += 1
 #------------------------------------------------------------------------------
 #Create a dictionary for the Genres
 #------------------------------------------------------------------------------
+				#publications_by_genre = {}
+				#with open(csv_path+csv_name) as csv_file:
+				#	reader = csv.reader(csv_file)
+				#for i in range(2):
+				#	if not row['Genre'] in genres:
+				#		genres[row['Genre']] = []
+				#	if not row['Genre'] in publications_by_genre:
+				#		publications_by_genre[row['Genre']] = []
+
+				#		genres[genre_id].append(author_publications)
+					#row_index =+ 1
+
+
 	for csv_name in csv_list:
 		with open(csv_path+csv_name) as csv_file:
 			reader = csv.reader(csv_file)
