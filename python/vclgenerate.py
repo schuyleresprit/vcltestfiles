@@ -151,84 +151,59 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				date_id = row['Pubdate']
 				author_publications['Pubdate'] = date_id
 
-				#print(author_publications)
-
 				publications[author_id].append(author_publications)
 				row_index += 1
-
-
 #--------------------------------------------------------------------------------
 #Create a dictionary for the LANGUAGES
 #-------------------------------------------------------------------------------
 				publications_by_language = {}
-	#	for csv_name in csv_list:
-				#print(author_publications)
+				publications_by_genre = {}
+				publications_by_timeline = {}
+
 				with open(csv_path+csv_name) as csv_file:
 					reader = csv.reader(csv_file)
 				for i in range(2):
-					#next(reader) #Skip to data lines
 
-					#for row in reader:
 					if not row['Language'] in languages:
 						languages[row['Language']] = []
 
 					if not row['Language'] in publications_by_language:
 						publications_by_language[row['Language']] = []
-
-
-				#language_id = []#reader.__next__()
-				#languages['English'] = ['English']
-				#languages['French'] = ['French']
-				#languages['Spanish'] = ['Spanish']
-				#languages['Haitian Creole'] = ['Haitian Creole']
-				#languages['Czech'] = ['Czech']
-				#language_id = []
-				#print(languages )
-				#for language_id in languages:
-				#for language_id in languages:
-					#if language_id == True:
-							#filter(publications)
-				#row_index += 1
 						languages[language_id].append(author_publications)
 						#row_index += 1
-#------------------------------------------------------------------------------
-#Create a dictionary for the Genres
-#------------------------------------------------------------------------------
-				#publications_by_genre = {}
-				#with open(csv_path+csv_name) as csv_file:
-				#	reader = csv.reader(csv_file)
-				#for i in range(2):
-				#	if not row['Genre'] in genres:
-				#		genres[row['Genre']] = []
-				#	if not row['Genre'] in publications_by_genre:
-				#		publications_by_genre[row['Genre']] = []
+						print(author_publications)
+						
+				with open(csv_path+csv_name) as csv_file:
+					reader = csv.reader(csv_file)
+				for i in range(2):
 
-				#		genres[genre_id].append(author_publications)
-					#row_index =+ 1
+					if not row['Genre'] in genres:
+						genres[row['Genre']] = []
+					if not row['Genre'] in publications_by_genre:
+						publications_by_genre[row['Genre']] = []
+						genres[genre_id].append(author_publications)
+						#row_index =+ 1
 
 
-	for csv_name in csv_list:
-		with open(csv_path+csv_name) as csv_file:
-			reader = csv.reader(csv_file)
+	#for csv_name in csv_list:
+	#	with open(csv_path+csv_name) as csv_file:
+	#		reader = csv.reader(csv_file)
 
-			for row in reader:
+	#		for row in reader:
 
-				#genres = author_publications['Genre']
-			#genre_id = reader.__next__()
-
-				genres = {}
-				genres['Fiction (Novel)'] = ['Fiction (Novel)']
-				genres['Fiction (Novella)'] = ['Fiction (Novella)']
-				genres['Fiction (Short Story Collection)'] = ['Fiction (Short Story Collection)']
-				genres['Drama'] = ['Drama']
-				genres['Poetry Collection'] = ['Poetry Collection']
-				genres['Short Story'] = ['Short Story']
-				genres['Poem'] = ['Poem']
-				genres['Nonfiction Book'] = ['Nonfiction Book']
-				genres['Biography'] = ['Biography']
-				genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
-				genres['Anthology'] = ['Anthology']
-				genres[''] = ['NA']
+	#			genres = {}
+	#			genres['Fiction (Novel)'] = ['Fiction (Novel)']
+	#			genres['Fiction (Novella)'] = ['Fiction (Novella)']
+	#			genres['Fiction (Short Story Collection)'] = ['Fiction (Short Story Collection)']
+	#			genres['Drama'] = ['Drama']
+	#			genres['Poetry Collection'] = ['Poetry Collection']
+	#			genres['Short Story'] = ['Short Story']
+	#			genres['Poem'] = ['Poem']
+	#			genres['Nonfiction Book'] = ['Nonfiction Book']
+	#			genres['Biography'] = ['Biography']
+	#			genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
+	#			genres['Anthology'] = ['Anthology']
+	#			genres[''] = ['NA']
 				#genre_id = []
 				#genre_id == ['']
 				#author_publications['Genre'] = genre_id
@@ -236,7 +211,7 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				#for genre_id in genres:
 				#if genre_id in genres:
 				#genres[genre_id] = []
-				genres[genre_id].append(author_publications)
+		#		genres[genre_id].append(author_publications)
 
 			csv_file.close()
 
