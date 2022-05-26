@@ -153,35 +153,31 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				date_id = row['Pubdate']
 				author_publications['Pubdate'] = date_id
 
-				languages['English'] = ['English']
-				languages['French'] = ['French']
-				languages['Spanish'] = ['Spanish']
-				languages['Haitian Creole'] = ['Haitian Creole']
-				languages['Czech'] = ['Czech']
 
-				print(author_publications)
+				#print(author_publications)
 
 				publications[author_id].append(author_publications)
+
 
 
 #--------------------------------------------------------------------------------
 #Create a dictionary for the LANGUAGES
 #-------------------------------------------------------------------------------
-	#publications_by_language = []
-	#for csv_name in csv_list:
-		#with open(csv_path+csv_name) as csv_file:
-			#reader = csv.reader(csv_file)
-			#for i in range(2):
-				#next(reader) #Skip to data lines
+	publications_by_language = {}
+	for csv_name in csv_list:
+		with open(csv_path+csv_name) as csv_file:
+			reader = csv.reader(csv_file)
+			for i in range(2):
+				next(reader) #Skip to data lines
 
-			#for row in reader:
-				#if not row[3] in languages:
-					#languages[row[3]] = []
+			for row in reader:
+				if not row[3] in languages:
+					languages[row[3]] = []
 
-				#if not row[3] in publications_by_language:
-				#	publications_by_language[row[3]] = []
+				if not row[3] in publications_by_language:
+					publications_by_language[row[3]] = []
 
-				#language_id = reader.__next__()
+				#language_id = []#reader.__next__()
 				#languages['English'] = ['English']
 				#languages['French'] = ['French']
 				#languages['Spanish'] = ['Spanish']
@@ -192,8 +188,8 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				#for language_id in languages:
 				#for language_id in languages:
 					#if language_id == True:
-						#filter(publications)
-				row_index += 1
+							#filter(publications)
+				#row_index += 1
 				languages[language_id].append(author_publications)
 				#print(languages)
 
