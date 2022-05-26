@@ -139,10 +139,19 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				author_publications['Language'] = row['Language']
 				author_publications['Publisher'] = row['Publisher']
 				author_publications['Genre'] = row['Genre']
+				author_publications['Translation'] = row['Translation']
 				author_publications['Descriptor'] =  row['Descriptor']
 
 				publication_id = row['Title']
 				author_publications['Title'] = publication_id
+				language_id = row['Language']
+				author_publications['Language'] = language_id
+				genre_id = row['Genre']
+				author_publications['Genre'] = genre_id
+				translation_id = row['Translation']
+				author_publications['Translation'] = translation_id
+				date_id = row['Pubdate']
+				author_publications['Pubdate'] = date_id
 				publications[author_id].append(author_publications)
 
 
@@ -162,16 +171,14 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				languages['Spanish'] = ['Spanish']
 				languages['Haitian Creole'] = ['Haitian Creole']
 				languages['Czech'] = ['Czech']
-				language_id = []
+				#language_id = []
 
-				#language_id == ['']
 				#for language_id in languages:
 				for language_id in languages:
-				#publications.values()
-					#filter(language_id, publications)
-					languages[language_id].append(publications)
-
-			#row = reader.__next__()
+					#if language_id == True:
+						#filter(publications)
+					languages[language_id].append([author_id, ',', publication_id, ',', date_id])
+					row_index += 1
 #------------------------------------------------------------------------------
 #Create a dictionary for the Genres
 #------------------------------------------------------------------------------
@@ -213,15 +220,18 @@ def process_author_files(csv_path, csv_list, geonames_username):
 #---------------------------------------------------------------------------
 #get the translated title from the llst by author_id
 #---------------------------------------------------------------------------
-def get_translations(languages, publications):
-		author_publications = {}
-		author_publications['Translation'] = ['Translation']
-		publication_id = ['Title']
-		translation = set(author_publications['Translation'])
-		title = [publication_id]
-		for title in publications:
-			if ['Translation'] == 'y':
-				return translation
+def get_translations(publications):
+	for author_id in publications:
+		#author_publications ={}
+		#for author_publications['Translation'] in author_publications:
+		#author_publications = {}
+		#author_publications['Translation'] = ['Translation']
+			#translation = author_publications['Translation']
+		#publication_id = ['Title']
+		#title = [publication_id]
+			#for translation in author_publications:
+				if ['Translation'] == 'y':
+					return translation
 
 # ---------------
 # Function calls
@@ -232,7 +242,7 @@ author_ids, publications, places, countries,languages, genres = process_author_f
 #timeline = get_timeline(publications, places)
 #languages = get_languages(author_ids, publications)
 #genres = get_genres(author_ids, publications)
-translations = get_translations(languages, publications)
+translations = get_translations(publications)
 
 with codecs.open(AUTHOR_ID_JSON, 'w', 'utf8') as f:
 	f.write(json.dumps(author_ids, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))

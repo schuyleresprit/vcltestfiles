@@ -135,8 +135,8 @@ def get_timeline(author_publications, places):
 								#translation = set(author_publications['Translation'])
 								#title = [publication_id]
 							for translation_id in translations:
-								if [translation_id] == ['y']:
-									translations[translation_id].append(publications)
+								#if [translation_id] == ['y']:
+								translations[translation_id].append(publications)
 
             #author_publications['Language'] = language_id
             #languages[language_id] = []
