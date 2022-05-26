@@ -149,111 +149,111 @@ def process_author_files(csv_path, csv_list, geonames_username):
 
 		return author_ids, countries, places, publications
 
-	#---------------------------------------------------------------------------
-	def create_date_dict(publications):
-		date = {}
-		#row_index = 1
-		#for row in reader:
-		pubdate = date
-		#earliest_date, latest_date = get_earliest_and_latest_dates(author_publications)
-		start_year = (1800)
-		end_year = (2022)
+#---------------------------------------------------------------------------
+def create_date_dict(publications):
+	date = {}
+	#row_index = 1
+	#for row in reader:
+	pubdate = date
+	#earliest_date, latest_date = get_earliest_and_latest_dates(author_publications)
+	start_year = (1800)
+	end_year = (2022)
 
-		for year in range(start_year, end_year + 1):
-		#date_dict[year] = []
-			return pubdate
+	for year in range(start_year, end_year + 1):
+	#date_dict[year] = []
+		return pubdate
 
-	#--------------------------------------------------------------------------------
-	#def make_year(date):
-		#author_publications = {}
-		#pd.to_datetime(author_publications['Pubdate'])
-		#return date
-	#-------------------------------------------------------------------------
-	# Returns the earliest and latest dates in the data
-	#-------------------------------------------------------------------------
-	def get_earliest_and_latest_dates(publications):
+#--------------------------------------------------------------------------------
+#def make_year(date):
+	#author_publications = {}
+	#pd.to_datetime(author_publications['Pubdate'])
+	#return date
+#-------------------------------------------------------------------------
+# Returns the earliest and latest dates in the data
+#-------------------------------------------------------------------------
+def get_earliest_and_latest_dates(publications):
 
-		start_dates = []
-		end_dates = []
+	start_dates = []
+	end_dates = []
 
-		for author_id in publications:
-			for author_publications in pubications[author_id]:
-				start_date = author_publications['Pubdate']
-				end_date = author_publications['Pubdate']
+	for author_id in publications:
+		for author_publications in pubications[author_id]:
+			start_date = author_publications['Pubdate']
+			end_date = author_publications['Pubdate']
 
-				if not start_date == '': start_dates.append(start_date)
-				if not end_date == '': end_dates.append(end_date)
+			if not start_date == '': start_dates.append(start_date)
+			if not end_date == '': end_dates.append(end_date)
 
-		start_dates = sorted(start_dates)
-		end_dates = sorted(end_dates)
+	start_dates = sorted(start_dates)
+	end_dates = sorted(end_dates)
 
-		return start_dates[0], end_dates[len(end_dates)-1]
+	return start_dates[0], end_dates[len(end_dates)-1]
 
 	#--------------------------------------------------------------------------------
 	#Create a dictionary for the LANGUAGES
 	#-------------------------------------------------------------------------------
 def get_languages(publications):
-	language_id = []
+	#language_id = []
 
-	#for author_id in publications:
-		#print(author_id)
-	for author_publications in publications:
-		language_id = author_publications['Language']
-		for language_id in publications:
-			#	languages = {}
-			languages = sorted(publications[language_id])
-			return languages
+	for author_id in publications:
+		for author_publications in publications[author_id]:
+			language_id = author_publications['Language']
+			#TODO: Fix This later!!!
+			for language_id in publications:
+				#	languages = {}
+				languages = publications[language_id]
+				return languages
 
-	#--------------------------------------------------------------------------------
-	def get_genres(publications):
-		genre_ids = []
+#--------------------------------------------------------------------------------
+def get_genres(publications):
+	genre_ids = []
 
-		for author_id in publications:
+	for author_id in publications:
+		for author_publications in publications[author_id]:
+			genre_id = author_publications['Genre']
+
+	genres = sorted(publications[genre_id])
+	return genres
+
+#-----------------------------------------------------------------------------
+def get_translations(publications):
+	translation_ids = []
+	translations = {}
+
+	for author_id in publications:
+		for author_publications in publications[author_id]:
+			translation_id = author_publications['Translation']
+			#translation_id['y'] = ['y']
+			#translation_id['n'] = ['n']
+		for translation_id in publications:
 			for author_publications in publications[author_id]:
-				genre_id = author_publications['Genre']
+				if [translation_id] == ['y']:
+					translations = sorted(publications[translation_id])
+	return translations
+				#translations[translation_id].append(publications)
 
-		genres = sorted(publications[genre_id])
-		return genres
-
-	#-----------------------------------------------------------------------------
-	def get_translations(publications):
-		translation_ids = []
-		translations = {}
-
-		for author_id in publications:
-			for author_publications in publications[author_id]:
-				translation_id = author_publications['Translation']
-				#translation_id['y'] = ['y']
-				#translation_id['n'] = ['n']
-			for translation_id in publications:
-				for author_publications in publications[author_id]:
-					if [translation_id] == ['y']:
-						translations = sorted(publications[translation_id])
-		return translations
-					#translations[translation_id].append(publications)
-
-	#---------------------------------------------------------------------------
-	#Bibliographies by date
-	#---------------------------------------------------------------------------
-	#def get_bib_by_date(publications):
-		#bibliographies = create_date_dict(publications)
-		#pubdate = create_date_dict(publications)
-		#date = {}
+#---------------------------------------------------------------------------
+#Bibliographies by date
+#---------------------------------------------------------------------------
+#def get_bib_by_date(publications):
+	#bibliographies = create_date_dict(publications)
+	#pubdate = create_date_dict(publications)
+	#date = {}
 
 
-		#for pubdate in publications:
-			#for author_id in publications:
-				#start_date = pubdate
-				#end_date = pubdate
+	#for pubdate in publications:
+		#for author_id in publications:
+			#start_date = pubdate
+			#end_date = pubdate
 
-				#publications['Pubdate'] = date
-				#if not start_date == '':
-				#	publications[author_id].append(bibliographies)
-				#if not start_date == end_date and not end_date == '':
-					#publications[author_id].append(bibliographies)
+			#publications['Pubdate'] = date
+			#if not start_date == '':
+			#	publications[author_id].append(bibliographies)
+			#if not start_date == end_date and not end_date == '':
+				#publications[author_id].append(bibliographies)
 
-		#return bibliographies
-	#, languages, genres, translations
+	#return bibliographies
+#, languages, genres, translations
 
 # ---------------
 # Function calls
