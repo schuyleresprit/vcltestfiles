@@ -1,52 +1,28 @@
 {
     "Czech": [
-        "Czech",
-        [
-            "psallfrey",
-            ",",
-            "The Orchid House",
-            ",",
-            "1953"
-        ]
+        "Czech"
     ],
     "English": [
         "English",
-        [
-            "psallfrey",
-            ",",
-            "The Orchid House",
-            ",",
-            "1953"
-        ]
+        {
+            "Author": "Phyllis Shand Allfrey",
+            "Descriptor": "",
+            "Genre": "Fiction (Novel)",
+            "Language": "English",
+            "Pub_id": "london__england",
+            "Pubdate": "1953",
+            "Publisher": "Virago Press",
+            "Title": "The Orchid House",
+            "Translation": "n"
+        }
     ],
     "French": [
-        "French",
-        [
-            "psallfrey",
-            ",",
-            "The Orchid House",
-            ",",
-            "1953"
-        ]
+        "French"
     ],
     "Haitian Creole": [
-        "Haitian Creole",
-        [
-            "psallfrey",
-            ",",
-            "The Orchid House",
-            ",",
-            "1953"
-        ]
+        "Haitian Creole"
     ],
     "Spanish": [
-        "Spanish",
-        [
-            "psallfrey",
-            ",",
-            "The Orchid House",
-            ",",
-            "1953"
-        ]
+        "Spanish"
     ]
 }

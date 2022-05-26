@@ -161,10 +161,11 @@ def process_author_files(csv_path, csv_list, geonames_username):
 	for csv_name in csv_list:
 		with open(csv_path+csv_name) as csv_file:
 			reader = csv.reader(csv_file)
+			row_index = 3
 
 			for row in reader:
 
-			#language_id = reader.__next__()
+				#language_id = reader.__next__()
 				languages = {}
 				languages['English'] = ['English']
 				languages['French'] = ['French']
@@ -172,13 +173,14 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				languages['Haitian Creole'] = ['Haitian Creole']
 				languages['Czech'] = ['Czech']
 				#language_id = []
-
+				print(languages )
 				#for language_id in languages:
-				for language_id in languages:
+				#for language_id in languages:
 					#if language_id == True:
 						#filter(publications)
-					languages[language_id].append([author_id, ',', publication_id, ',', date_id])
-					row_index += 1
+				languages[language_id].append(author_publications)
+				print(languages)
+
 #------------------------------------------------------------------------------
 #Create a dictionary for the Genres
 #------------------------------------------------------------------------------
@@ -188,7 +190,7 @@ def process_author_files(csv_path, csv_list, geonames_username):
 
 			for row in reader:
 
-				genres = author_publications['Genre']
+				#genres = author_publications['Genre']
 			#genre_id = reader.__next__()
 
 				genres = {}
@@ -204,14 +206,14 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
 				genres['Anthology'] = ['Anthology']
 				genres[''] = ['NA']
-				genre_id = []
-				genre_id == ['']
+				#genre_id = []
+				#genre_id == ['']
 				#author_publications['Genre'] = genre_id
 
-				for genre_id in genres:
+				#for genre_id in genres:
 				#if genre_id in genres:
 				#genres[genre_id] = []
-					genres[genre_id].append(publications)
+				genres[genre_id].append(author_publications)
 
 			csv_file.close()
 

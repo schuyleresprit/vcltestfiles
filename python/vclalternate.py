@@ -192,15 +192,17 @@ def process_author_files(csv_path, csv_list, geonames_username):
 	#--------------------------------------------------------------------------------
 	#Create a dictionary for the LANGUAGES
 	#-------------------------------------------------------------------------------
-	def get_languages(publications):
-		language_ids = []
+def get_languages(publications):
+	language_id = []
 
-		for author_id in publications:
-			for author_publications in publications[author_id]:
-				language_id = author_publications['Language']
-
-		languages = sorted(publications[language_id])
-		return languages
+	#for author_id in publications:
+		#print(author_id)
+	for author_publications in publications:
+		language_id = author_publications['Language']
+		for language_id in publications:
+			#	languages = {}
+			languages = sorted(publications[language_id])
+			return languages
 
 	#--------------------------------------------------------------------------------
 	def get_genres(publications):
@@ -260,7 +262,7 @@ csv_list = get_csv_list(CSV_LOCATION)
 author_ids, countries, places, publications = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
 #, languages, genres, translations
 #bibliographies = get_bib_by_date(publications)
-#languages = get_languages(publications)
+languages = get_languages(publications)
 #genres = get_genres(publications)
 #translations = get_translations(publications)
 
@@ -276,9 +278,9 @@ with codecs.open(PLACES_JSON, 'w', 'utf8') as f:
 	f.write(json.dumps(places, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
 	f.close()
 
-#with codecs.open(LANGUAGES_JSON, 'w', 'utf8') as f:
-	#f.write(json.dumps(languages, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
-	#f.close()
+with codecs.open(LANGUAGES_JSON, 'w', 'utf8') as f:
+	f.write(json.dumps(languages, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
+	f.close()
 
 #with codecs.open(GENRES_JSON, 'w', 'utf8') as f:
 	#f.write(json.dumps(genres, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
