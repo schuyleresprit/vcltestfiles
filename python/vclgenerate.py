@@ -187,7 +187,6 @@ def process_author_files(csv_path, csv_list, geonames_username):
 						publications_by_timeline[row['Pubdate']] = []
 						timeline[date_id].append(author_publications)
 						row_index += 1
-
 	for i in range(2):
 		for publications_by_translation[row['Translation']] in translations:
 			if translation_id == ['y']:
