@@ -224,3 +224,13 @@ def get_timeline(author_publications, places):
 			#languages = get_languages(author_ids, publications)
 			#genres = get_genres(author_ids, publications)
 			#translations = get_translations(CSV_LOCATION, publications)
+
+
+									#print(author_publications)
+						#for author_publications in publications:
+						#for i in range(2):
+								#translations[row['Translation']] = []
+							#for publications_by_translation[row['Translation']] in translations:
+						#if translation_id == ['y']:
+							#translations[translation_id].append(author_publications)
+							#row_index += 1
