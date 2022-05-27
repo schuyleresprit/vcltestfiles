@@ -159,6 +159,7 @@ def process_author_files(csv_path, csv_list, geonames_username):
 				publications_by_language = {}
 				publications_by_genre = {}
 				publications_by_timeline = {}
+				publications_by_translation = {}
 
 				with open(csv_path+csv_name) as csv_file:
 					reader = csv.reader(csv_file)
@@ -171,69 +172,41 @@ def process_author_files(csv_path, csv_list, geonames_username):
 						languages[language_id].append(author_publications)
 						row_index += 1
 
-						print(author_publications)
-				#for author_publications in publications:
-
-	#with open(csv_path+csv_name) as csv_file:
-
-	#	reader = csv.reader(csv_file)
 				for i in range(2):
-	#	for j in range(i):
 
 					if not row['Genre'] in genres:
 						genres[row['Genre']] = []
 					if not row['Genre'] in publications_by_genre:
 						publications_by_genre[row['Genre']] = []
 						genres[genre_id].append(author_publications)
-						#row_index =+ 1
-
-	with open(csv_path+csv_name) as csv_file:
-		reader = csv.reader(csv_file)
-	for i in range(2):
-
-		if not row['Pubdate'] in timeline:
-			timeline[row['Pubdate']] = []
-			if not row['Pubdate'] in publications_by_timeline:
-				publications_by_timeline[row['Pubdate']] = []
-				timeline[date_id].append(author_publications)
-
-	#for csv_name in csv_list:
-	#	with open(csv_path+csv_name) as csv_file:
-	#		reader = csv.reader(csv_file)
-
-	#		for row in reader:
-
-	#			genres = {}
-	#			genres['Fiction (Novel)'] = ['Fiction (Novel)']
-	#			genres['Fiction (Novella)'] = ['Fiction (Novella)']
-	#			genres['Fiction (Short Story Collection)'] = ['Fiction (Short Story Collection)']
-	#			genres['Drama'] = ['Drama']
-	#			genres['Poetry Collection'] = ['Poetry Collection']
-	#			genres['Short Story'] = ['Short Story']
-	#			genres['Poem'] = ['Poem']
-	#			genres['Nonfiction Book'] = ['Nonfiction Book']
-	#			genres['Biography'] = ['Biography']
-	#			genres['Autobiography/Memoir'] = ['Autobiography/Memoir']
-	#			genres['Anthology'] = ['Anthology']
-	#			genres[''] = ['NA']
-				#genre_id = []
-				#genre_id == ['']
-				#author_publications['Genre'] = genre_id
-
-				#for genre_id in genres:
-				#if genre_id in genres:
-				#genres[genre_id] = []
-		#		genres[genre_id].append(author_publications)
-
+						row_index += 1
+						print(author_publications)
+			#for author_publications in publications:
+				for i in range(2):
+					if not row['Pubdate'] in timeline:
+						timeline[row['Pubdate']] = []
+					if not row['Pubdate'] in publications_by_timeline:
+						publications_by_timeline[row['Pubdate']] = []
+						timeline[date_id].append(author_publications)
+						row_index += 1
+	for author_publications in publications:
+		for i in range(2):
+		#if not row['Translation'] in translations:
+			translations[row['Translation']] = []
+		#if not row['Translation'] in publications_by_translation:
+		for publications_by_translation[row['Translation']] in translations:
+			if translation_id == ['y']:
+				translations[translation_id].append(author_publications)
+				row_index += 1
 			csv_file.close()
 
 
-		return author_ids, publications, places, countries, languages, genres, timeline
+		return author_ids, publications, places, countries, languages, genres, timeline, translations
 
 #---------------------------------------------------------------------------
 #get the translated title from the llst by author_id
 #---------------------------------------------------------------------------
-def get_translations(CSV_LOCATION, publications):
+#def get_translations(CSV_LOCATION, publications):
 	#with open(csv_path+csv_name) as csv_file:
 	#	reader = csv.reader(csv_file)
 	#for row in reader:
@@ -247,28 +220,28 @@ def get_translations(CSV_LOCATION, publications):
 		#if not row['Translation'] in publications_by_translation:
 			#publications_by_translation[row['Translation']] = []
 			#languages[language_id].append(author_publications)
-	for author_id in publications:
-		author_publications ={}
+	#for author_id in publications:
+	#	author_publications ={}
 		#for author_publications['Translation'] in author_publications:
 		#author_publications = {}
-		author_publications['Translation'] = ['Translation']
-		translations = author_publications['Translation']
+		#author_publications['Translation'] = ['Translation']
+		#translations = author_publications['Translation']
 		#publication_id = ['Title']
 		#title = [publication_id]
-		for translations in author_publications:
-			if ['Translation'] == 'y':
-				return translations
+		#for translations in author_publications:
+			#if ['Translation'] == 'y':
+			#	return translations
 
 # ---------------
 # Function calls
 # ---------------
 csv_list = get_csv_list(CSV_LOCATION)
-author_ids, publications, places, countries,languages, genres, timeline = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
+author_ids, publications, places, countries,languages, genres, timeline, translations = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
 
 #timeline = get_timeline(publications, places)
 #languages = get_languages(author_ids, publications)
 #genres = get_genres(author_ids, publications)
-translations = get_translations(CSV_LOCATION, publications)
+#translations = get_translations(CSV_LOCATION, publications)
 
 with codecs.open(AUTHOR_ID_JSON, 'w', 'utf8') as f:
 	f.write(json.dumps(author_ids, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
