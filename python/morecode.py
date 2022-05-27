@@ -187,3 +187,40 @@ def get_timeline(author_publications, places):
 									#if language_id == True:
 											#filter(publications)
 								#row_index += 1
+
+									#if not row['Translation'] in translations:
+											#if not row['Translation'] in publications_by_translation:
+#---------------------------------------------------------------------------
+#get the translated title from the llst by author_id
+#---------------------------------------------------------------------------
+#def get_translations(CSV_LOCATION, publications):
+	#with open(csv_path+csv_name) as csv_file:
+	#	reader = csv.reader(csv_file)
+	#for row in reader:
+		#translation_id = row['Translation']
+		##author_publications['Translation'] = translation_id
+		#publication_by_translation = {}
+
+		#if not row['Translation'] in translations:
+		#	translations[row['Translation']] = []
+
+		#if not row['Translation'] in publications_by_translation:
+			#publications_by_translation[row['Translation']] = []
+			#languages[language_id].append(author_publications)
+	#for author_id in publications:
+	#	author_publications ={}
+		#for author_publications['Translation'] in author_publications:
+		#author_publications = {}
+		#author_publications['Translation'] = ['Translation']
+		#translations = author_publications['Translation']
+		#publication_id = ['Title']
+		#title = [publication_id]
+		#for translations in author_publications:
+			#if ['Translation'] == 'y':
+			#	return translations
+
+
+			#timeline = get_timeline(publications, places)
+			#languages = get_languages(author_ids, publications)
+			#genres = get_genres(author_ids, publications)
+			#translations = get_translations(CSV_LOCATION, publications)
