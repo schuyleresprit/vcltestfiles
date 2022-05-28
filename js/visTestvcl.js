@@ -3,13 +3,14 @@ class CreateMap {
 	constructor(){
 		this.data = {};
 
+		this.author_ids = {};
+		this.publications = {};
+		this.places = {};
+		this.countries = {};
 		this.languages = {};
 		this.genres = {};
-		this.countries = {};
-		this.publishers ={};
-		this.publications = {}
-		this.authors = {};  // {author_id: author_name}
-        this.author_names = {}; // {author_name: author_id}
+		this.timeline = {};
+		this.translations = {};
 		this.continents = {};
 
 		//store screen height and width
@@ -19,8 +20,8 @@ class CreateMap {
 		this.loading = [];
 
 		this.range = [
-			new Date(1800,1,1),
-			new Date(2022,1,1)
+			new Date(1800),
+			new Date(2022)
 		];
 		this.date_start = this.range[0];
 		this.date_end = this.range[1];
@@ -43,10 +44,9 @@ class CreateMap {
 			self.generate();
 		}
 	}
-
 	get_data(){
 		var self = this;
-		var datasets = ['author_ids','publications','genres','places','countries','languages','continents'];
+		var datasets = ['author_ids','publications','places','countries','languages', 'genres', 'timeline', 'translations','continents'];
 
 		datasets.forEach(function(d){ self.loading.push(d); });
 		datasets.forEach(function(d){
@@ -67,9 +67,17 @@ class CreateMap {
 
 		self.continents = self.data.continents;
 
+		d3.keys(self.data.countries).forEach(function(d){
+			var k = d.split(',');
+			k[0] = k[0].trim().split(' ').join('-');
+			k[1] = k[1].trim().split(' ').join('-');
+			k = k.join('_').toLowerCase();
+			self.countries[k] = self.data.places[d];
+			self.countries[k].Country = d;
+
 		//WEAKPOINT ** fix later
 		//places
-		d3.keys(self.data.countries).forEach(function(d){
+		d3.keys(self.data.places).forEach(function(d){
 			var k = d.split(',');
 			k[0] = k[0].trim().split(' ').join('-');
 			k[1] = k[1].trim().split(' ').join('-');
@@ -91,19 +99,19 @@ class CreateMap {
 		//self.pubplaces = {};
 
 		//languages
-		self.languages = {};
+		self.languages = self.data.languages;
 
 		//text length
 		//self.length = self.data.length;
 
-		//itineraries
-		self.itineraries = {};
-		d3.keys(self.authors).forEach(function(d){
-			if(!self.itineraries[d]){ self.itineraries[d] = []; }
+		//timeline
+		self.timeline = {};
+		d3.keys(self.author_ids).forEach(function(d){
+			if(!self.timeline[d]){ self.timeline[d] = []; }
 		});
-		d3.keys(self.data.itineraries).forEach(function(d){
-			self.data.itineraries[d].forEach(function(_d){
-				self.itineraries[_d.AuthorID].push(_d);
+		d3.keys(self.data.timeline).forEach(function(d){
+			self.data.timeline[d].forEach(function(_d){
+				self.timeline[_d.Author].push(_d);
 			});
 		});
 	}
@@ -249,10 +257,10 @@ class CreateMap {
 		var path = d3.geo.path().projection(projection);
 
 		var features = topojson.feature(self.continents,self.continents.objects.continents);
-	  var intersections,
-				intersections_unique,
-		//		trajectories,
-		//		trajectories_unique;
+	  	var publications,
+				publications_unique,
+		//		timeline,
+		//		timeline_unique;
 		var points_target,
 				points_g,
 				points_backs,
@@ -339,9 +347,9 @@ class CreateMap {
 			});
 			//pair up start and end points
 			var tier = 0;
-			for(var i=0; i<d3.keys(trajectories).length; i++){
+			for(var i=0; i<d3.keys(publications).length; i++){
 				for(var j=0; j<trajectories[d3.keys(trajectories)[i]].length -1; j++){
-					trajectories[d3.keys(trajectories)[i]][j].PlaceID_End = trajectories[d3.keys(trajectories)[i]][j+1].PlaceID;
+					publications[d3.keys(publicatons)[i]][j].PlaceID_End = trajectories[d3.keys(trajectories)[i]][j+1].PlaceID;
 					trajectories[d3.keys(trajectories)[i]][j].Likelihood_End = trajectories[d3.keys(trajectories)[i]][j+1].Likelihood;
 					trajectories[d3.keys(trajectories)[i]][j].tier = tier;
 					tier=(j%2)*10;
@@ -349,7 +357,7 @@ class CreateMap {
 			}
 			//make list of unique trajectories per place
 			d3.keys(intersections).forEach(function(d){
-				if(!trajectories_unique[d]){ trajectories_unique[d] = []; }
+				if(!publications_unique[d]){ publications_unique[d] = []; }
 			});
 			d3.values(trajectories).forEach(function(d){
 				d.forEach(function(_d){
