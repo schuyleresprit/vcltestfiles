@@ -1,22 +1,46 @@
-const { series, parallel } = require('gulp');
-const { src, dest } = require('gulp');
+var gulp = require('gulp');
 
-function clean(cb) {
-  // body omitted
-  cb();
-}
+var css = require('css');
+var javascript = require('javascript');
+var json = require('json');
 
+// Define tasks
 function css() {
-  // body omitted
-  return src('css/style.css')
-    .pipe(dest('output'));
-
+  gulp.src('css/styles.css')
+  .pipe(dest('output'));
 }
 
 function javascript() {
-    return src('visTestvcl.js')
-      .pipe(dest('output'));
-
+  gulp.src('js/visTestvcl.js')
+  .pipe(dest('output'));
 }
 
-exports.build = series(clean, parallel(css, javascript));
+function json() {
+  gulp.src('package.json')
+  .pipe(dest('output'));
+}
+
+function watch() {
+  gulp.watch('styles/**/*.css', ['processCSS']);
+}
+//const { series, parallel } = require('gulp');
+//const { src, dest } = require('gulp');
+
+//function clean(cb) {
+  // body omitted
+  //cb();
+//}
+
+//function css() {
+  // body omitted
+ // return src('css/style.css')
+//    .pipe(dest('output'));
+
+//
+//function javascript() {
+    //return src('js/visTestvcl.js')
+      //.pipe(dest('output'));
+
+//}
+
+//exports.build = series(clean, parallel(css, javascript));
