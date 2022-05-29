@@ -286,14 +286,14 @@ class CreateMap {
 		function filter_data(){
 
 			//clear objects
-			intersections = {};
-			intersections_unique = {};
+			languages = {};
+			languages_unique = {};
 		//	trajectories = {};
 		//	trajectories_unique = {};
 
 			//INTERSECTIONS
 			//filter by date range
-			var holder = d3.entries(self.intersections).filter(function(d){
+			var holder = d3.entries(self.languages).filter(function(d){
 				var n = new Date(d.key);
 				return n >=self.date_start && n <=self.date_end;
 			});
@@ -303,32 +303,32 @@ class CreateMap {
 			holder.forEach(function(d){
 				if(d3.keys(d.value).length >0){
 					d3.keys(d.value).forEach(function(_d){
-						if(!intersections[_d]){
-							intersections[_d] = {};
-							intersections[_d].figures = {};
+						if(!languages[_d]){
+							languages[_d] = {};
+							languages[_d].figures = {};
 						}
 						d.value[_d].forEach(function(__d){
-							if(!intersections[_d].figures[__d.AuthorID] || intersections[_d].figures[__d.AuthorID] >__d.Likelihood){
-								intersections[_d].figures[__d.AuthorID] = __d.Likelihood;
+							if(!languages[_d].figures[__d.AuthorID] || languages[_d].figures[__d.AuthorID] >__d.Likelihood){
+								//languages[_d].figures[__d.AuthorID] = __d.Likelihood;
 							}
 						});
 					});
 				}
 			});
 			//tally up totals
-			d3.keys(intersections).forEach(function(d){
-				intersections[d].lists = {};
-				intersections[d].lists._01 = d3.values(intersections[d].figures).filter(function(_d){ return _d === 1; });
-				intersections[d].lists._02 = d3.values(intersections[d].figures).filter(function(_d){ return _d === 2; });
-				intersections[d].lists._03 = d3.values(intersections[d].figures).filter(function(_d){ return _d === 3; });
+			d3.keys(languages).forEach(function(d){
+				languages[d].lists = {};
+				languages[d].lists._01 = d3.values(languages[d].figures).filter(function(_d){ return _d === 1; });
+				languages[d].lists._02 = d3.values(languages[d].figures).filter(function(_d){ return _d === 2; });
+				languages[d].lists._03 = d3.values(languages[d].figures).filter(function(_d){ return _d === 3; });
 			});
 			//make list of unique intersections per place
 			holder.forEach(function(d){
 				d3.keys(d.value).forEach(function(_d){
-					if(!intersections_unique[_d]){ intersections_unique[_d] = []; }
+					if(!languages_unique[_d]){ languages_unique[_d] = []; }
 					d.value[_d].forEach(function(__d){
-						if(intersections_unique[_d].filter(function(t){ return t.AuthorID === __d.AuthorID && t.EndDate === __d.EndDate; }).length === 0){
-							intersections_unique[_d].push(__d);
+						if(languages_unique[_d].filter(function(t){ return t.AuthorID === __d.AuthorID && t.EndDate === __d.EndDate; }).length === 0){
+							languages_unique[_d].push(__d);
 						}
 					});
 				});
@@ -338,9 +338,9 @@ class CreateMap {
 			holder.forEach(function(d){
 				d3.keys(d.value).forEach(function(_d){
 					d.value[_d].forEach(function(__d){
-						if(!trajectories[__d.AuthorID]){ trajectories[__d.AuthorID] = []; }
-						if(trajectories[__d.AuthorID].filter(function(t){ return t.PlaceID === __d.PlaceID && t.EndDate === __d.EndDate; }).length === 0){
-							trajectories[__d.AuthorID].push(__d);
+						if(!genres[__d.AuthorID]){ genres[__d.AuthorID] = []; }
+						if(genres[__d.AuthorID].filter(function(t){ return t.PubID === __d.PubID && t.EndDate === __d.EndDate; }).length === 0){
+							genres[__d.AuthorID].push(__d);
 						}
 					});
 				});
@@ -348,23 +348,22 @@ class CreateMap {
 			//pair up start and end points
 			var tier = 0;
 			for(var i=0; i<d3.keys(publications).length; i++){
-				for(var j=0; j<trajectories[d3.keys(trajectories)[i]].length -1; j++){
-					publications[d3.keys(publicatons)[i]][j].PlaceID_End = trajectories[d3.keys(trajectories)[i]][j+1].PlaceID;
-					trajectories[d3.keys(trajectories)[i]][j].Likelihood_End = trajectories[d3.keys(trajectories)[i]][j+1].Likelihood;
-					trajectories[d3.keys(trajectories)[i]][j].tier = tier;
+				for(var j=0; j<genres[d3.keys(genres)[i]].length -1; j++){
+					publications[d3.keys(publicatons)[i]][j].PlaceID_End = genres[d3.keys(genres)[i]][j+1].PlaceID;
+					genres[d3.keys(genres)[i]][j].tier = tier;
 					tier=(j%2)*10;
 				}
 			}
 			//make list of unique trajectories per place
-			d3.keys(intersections).forEach(function(d){
+			d3.keys(publications).forEach(function(d){
 				if(!publications_unique[d]){ publications_unique[d] = []; }
 			});
-			d3.values(trajectories).forEach(function(d){
+			d3.values(genres).forEach(function(d){
 				d.forEach(function(_d){
-					if(!trajectories_unique[_d.PlaceID]){ trajectories_unique[_d.PlaceID] = []; }
-					if(!trajectories_unique[_d.PlaceID_End]){ trajectories_unique[_d.PlaceID_End] = []; }
-					trajectories_unique[_d.PlaceID].push(_d);
-					if(_d.PlaceID_End){ trajectories_unique[_d.PlaceID_End].push(_d); }
+					if(!genres_unique[_d.PlaceID]){ genres_unique[_d.PlaceID] = []; }
+					if(!genres_unique[_d.PlaceID_End]){ genres_unique[_d.PlaceID_End] = []; }
+					genres_unique[_d.PlaceID].push(_d);
+					if(_d.PlaceID_End){ genres_unique[_d.PlaceID_End].push(_d); }
 				});
 			});
 		}
@@ -737,13 +736,13 @@ class CreateMap {
             .text(function(d){
                 var t1 = d.StartDate || 'Unknown',
                     t2 = d.EndDate || 'Unknown';
-                return self.places[d.PlaceID].PlaceName + ' (' +t1 +' to ' +t2 +')';
+                return self.places[d.PubID].PlaceName + ' (' +t1 +' to ' +t2 +')';
             });
         route_point_labels.exit().remove();
 
     }
 
-    generate_routes(){
+    generate_publications(){
         var visH = this.height*6;
         this.svg.attr('height', visH);
     }
