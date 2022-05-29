@@ -1,3 +1,7 @@
+var init = function(){
+
+	return {
+		
 class CreateMap {
 
 	constructor(){
@@ -67,13 +71,13 @@ class CreateMap {
 
 		self.continents = self.data.continents;
 
-		d3.keys(self.data.countries).forEach(function(d){
-			var k = d.split(',');
-			k[0] = k[0].trim().split(' ').join('-');
-			k[1] = k[1].trim().split(' ').join('-');
-			k = k.join('_').toLowerCase();
-			self.countries[k] = self.data.places[d];
-			self.countries[k].Country = d;
+		//d3.keys(self.data.countries).forEach(function(d){
+			//var k = d.split(',');
+			//k[0] = k[0].trim().split(' ').join('-');
+			//k[1] = k[1].trim().split(' ').join('-');
+			//k = k.join('_').toLowerCase();
+			//self.countries[k] = self.data.places[d];
+			//self.countries[k].Country = d;
 
 		//WEAKPOINT ** fix later
 		//places
