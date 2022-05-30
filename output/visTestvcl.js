@@ -1,13 +1,10 @@
-var init = function(){
-
-	return {
-		
 class CreateMap {
 
 	constructor(){
 		this.data = {};
 
 		this.author_ids = {};
+		this.authors = {}
 		this.publications = {};
 		this.places = {};
 		this.countries = {};
@@ -17,6 +14,7 @@ class CreateMap {
 		this.translations = {};
 		this.continents = {};
 
+
 		//store screen height and width
 		this.width = window.innerWidth;
 		this.height = window.innerHeight;
@@ -24,8 +22,8 @@ class CreateMap {
 		this.loading = [];
 
 		this.range = [
-			new Date(1800),
-			new Date(2022)
+			new Date(1800,1,1),
+			new Date(2022,1,1)
 		];
 		this.date_start = this.range[0];
 		this.date_end = this.range[1];
@@ -50,7 +48,7 @@ class CreateMap {
 	}
 	get_data(){
 		var self = this;
-		var datasets = ['author_ids','publications','places','countries','languages', 'genres', 'timeline', 'translations','continents'];
+		var datasets = ['author_ids', 'authors', 'publications', 'places','countries', 'languages', 'genres', 'timeline', 'translations','continents'];
 
 		datasets.forEach(function(d){ self.loading.push(d); });
 		datasets.forEach(function(d){
@@ -71,13 +69,13 @@ class CreateMap {
 
 		self.continents = self.data.continents;
 
-		//d3.keys(self.data.countries).forEach(function(d){
-			//var k = d.split(',');
-			//k[0] = k[0].trim().split(' ').join('-');
-			//k[1] = k[1].trim().split(' ').join('-');
-			//k = k.join('_').toLowerCase();
-			//self.countries[k] = self.data.places[d];
-			//self.countries[k].Country = d;
+		d3.keys(self.data.countries).forEach(function(d){
+			var k = d.split(',');
+			k[0] = k[0].trim().split(' ').join('-');
+			k[1] = k[1].trim().split(' ').join('-');
+			k = k.join('_').toLowerCase();
+			self.countries[k] = self.data.places[d];
+			self.countries[k].Country = d;
 
 		//WEAKPOINT ** fix later
 		//places
@@ -93,7 +91,7 @@ class CreateMap {
 		//authors
 		d3.keys(self.data.author_ids).forEach(function(k){
 			self.authors[self.data.author_ids[k]] = k;
-            self.author_names[k] = self.data.author_ids[k];
+			self.author_names[k] = self.data.author_ids[k];
 		});
 
 		//genres
@@ -102,25 +100,24 @@ class CreateMap {
 		//publisher pubplaces
 		//self.pubplaces = {};
 
-		//languages
+		languages
 		self.languages = self.data.languages;
 
 		//text length
 		//self.length = self.data.length;
 
 		//timeline
-		self.timeline = {};
-		d3.keys(self.author_ids).forEach(function(d){
+		self.timeline = self.data.timeline;
+			d3.keys(self.author_ids).forEach(function(d){
 			if(!self.timeline[d]){ self.timeline[d] = []; }
 		});
 		d3.keys(self.data.timeline).forEach(function(d){
 			self.data.timeline[d].forEach(function(_d){
-				self.timeline[_d.Author].push(_d);
+				self.timeline[_d.PlaceID].push(_d);
 			});
 		});
-	}
 
-	setup(){
+	function setup(){
 		var self = this;
 		var tabs = d3.selectAll('.tab');
 
@@ -173,7 +170,7 @@ class CreateMap {
 		});
 	}
 
-	generate(){
+	function generate(){
 	    this.tear_down();
 		if(this.mode === 1){
 			this.generate_map();
@@ -182,7 +179,7 @@ class CreateMap {
 		}
 	}
 
-	generate_map(){
+	function generate_map(){
 		var self = this;
 		var focus = false;
 		var sidebar_tabs = d3.selectAll('.sidebar_tab'),
@@ -265,7 +262,7 @@ class CreateMap {
 				publications_unique,
 		//		timeline,
 		//		timeline_unique;
-		var points_target,
+ 				points_target,
 				points_g,
 				points_backs,
 				points_03,
@@ -558,7 +555,7 @@ class CreateMap {
 			if(focus){
 				d3.select('#sidebar_title').html('&#8618;&nbsp;' +self.places[focus.key].PlaceName);
 
-				var data = sidebar_mode === 1 ? (intersections_unique[focus.key] || []) : (trajectories_unique[focus.key]);
+				var data = sidebar_mode === 1 ? (languages_unique[focus.key] || []) : (trajectories_unique[focus.key]);
 				var items_target = d3.select('#sidebar_items');
 				var items,
 						items_date;
@@ -630,9 +627,9 @@ class CreateMap {
 		generate_sidebar();
 	}
 
-    route_change(_side){
+    function route_change(_side){
         var author_name = d3.select('#'+_side+'_select').property('value');
-        var author_id = this.author_names[author_name];
+        //var author_id = data(author_ids);
 
         var curr_svg;
         if(_side == 'left'){ curr_svg = this.left_svg; }
@@ -644,17 +641,17 @@ class CreateMap {
 
         // Find the earliest and latest itinerary dates
         var starts = [], ends = [];
-        d3.keys(self.itineraries).forEach(
-            function(d){
-                starts.push(d3.min(self.itineraries[d], function(_d){ return (new Date(_d.StartDate)); }));
-                ends.push(d3.max(self.itineraries[d], function(_d){ return (new Date(_d.EndDate)); }));
-        });
+        d3.keys(self.publications)
+            function for_each(d){
+                starts.push(d3.min(self.publications[d], function(_d){ return (new Date(_d.StartDate)); }));
+                ends.push(d3.max(self.publications[d], function(_d){ return (new Date(_d.EndDate)); }));
+        };
 
         var earliest_date = d3.min(starts);
         var latest_date = d3.max(ends);
 
         //Translate days to distance
-        var route_scale = d3.time.scale().domain([earliest_date, latest_date]).range([0, visH -150 -60]);
+    //    var route_scale = d3.time.scale().domain([earliest_date, latest_date]).range([0, visH -150 -60]);
 
         //Create route container
         var route_g = curr_svg.selectAll('g.route_g').data(author_id);
@@ -662,15 +659,15 @@ class CreateMap {
         route_g
             .attr('class', 'route_g author_' + _side)
             .attr('transform', function(d,i){
-                var x = i*(self.width/2),
-                    y = 150;
-                return 'translate(' + x +',' + y +')';
+               var x = i*(self.width/2),
+                   y = 150;
+             return 'translate(' + x +',' + y +')';
             });
         route_g.exit().remove();
 
         //Add background line
         var route_line_background = route_g.selectAll('line.route_line_background')
-            .data(self.itineraries[author_id]);
+            .data(self.publications[genres]);
         route_line_background.enter().append('line').classed('route_line_background',true);
         route_line_background
             .attr('x1',self.width/4)
@@ -689,7 +686,7 @@ class CreateMap {
         route_labels.exit().remove();
 
         //Lines
-        var route_line = route_g.selectAll('line.route_line').data(self.itineraries[author_id]);
+        var route_line = route_g.selectAll('line.route_line').data(self.publications[author_id]);
         route_line.enter().append('line').classed('route_line',true);
         route_line
             .attr('class', 'route_line author_' + _side)
@@ -704,7 +701,7 @@ class CreateMap {
         route_line.exit().remove();
 
         //Points
-        var route_points = route_g.selectAll('line.route_points').data(self.itineraries[author_id]);
+        var route_points = route_g.selectAll('line.route_points').data(self.publications[author_id]);
         route_points.enter().append('line').classed('route_points',true);
         route_points
             .attr('x1',self.width/4 -15)
@@ -719,7 +716,7 @@ class CreateMap {
 
         //Stops
         var route_rad = 3;
-        var route_stops = route_g.selectAll('circle.route_stops').data(self.itineraries[author_id]);
+        var route_stops = route_g.selectAll('circle.route_stops').data(self.publications[author_id]);
         route_stops.enter().append('circle').classed('route_stops',true);
         route_stops
             .attr('cx',self.width/4 +45)
@@ -730,7 +727,7 @@ class CreateMap {
         route_stops.exit().remove();
 
         //Point labels
-        var route_point_labels = route_g.selectAll('text.route_point_labels').data(self.itineraries[author_id]);
+        var route_point_labels = route_g.selectAll('text.route_point_labels').data(self.publications[author_id]);
         route_point_labels.enter().append('text').classed('route_point_labels',true);
         route_point_labels
             .attr('x',self.width/4 +60)
@@ -746,12 +743,12 @@ class CreateMap {
 
     }
 
-    generate_publications(){
+    function generate_publications(){
         var visH = this.height*6;
         this.svg.attr('height', visH);
     }
 
-	switch_mode(_id){
+	function switch_mode(_id){
 		this.mode = _id;
 		this.tear_down();
 		if(this.mode === 1){
@@ -761,7 +758,7 @@ class CreateMap {
 		}
 	}
 
-	tear_down(){
+	function tear_down(){
 		var opp = this.mode === 1 ? 2 : 1;
 
 		this.svg.selectAll("*").remove();
@@ -776,21 +773,17 @@ class CreateMap {
 		this.date_start = this.range[0];
 		this.date_end = this.range[1];
 	}
-}
+});
 
-var vis = new CreateMap();
-vis.get_data();
+//var vis = new CreateMap();
+//vis.get_data();
 
 //custom sub-selections
-d3.selection.prototype.first = function() {
-  return d3.select(this[0][0]);
-};
-d3.selection.prototype.last = function() {
-  var last = this.size() - 1;
-  return d3.select(this[0][last]);
-};
-
-
-// old_routes(){
-
-// }
+//d3.selection.prototype.first = function() {
+ // return d3.select(this[0][0]);
+//};
+//d3.selection.prototype.last = function() {
+ // var last = this.size() - 1;
+  //return d3.select(this[0][last]);
+}
+}

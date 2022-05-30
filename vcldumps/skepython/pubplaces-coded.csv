@@ -1,0 +1,521 @@
+,city,country,Pub Location,Latitudes,Longitudes
+0,Kingston,Jamaica,"Kingston, Jamaica",18.017589,-76.80273
+1,Barcelona,Spain,"Barcelona, Spain",41.382894,2.177432
+2,London,England,"London, England",51.507322,-0.127647
+3,Chichester,England,"Chichester, West Sussex, England",50.836486,-0.779172
+4,Richmond,London,"Richmond, Londonland",37.538509,-77.43428
+5,Oxford,England,"Oxford, England",51.773175,-1.264027
+6,Valencia,Spain,"Valencia, Spain",39.469707,-0.376335
+7,Paris,France,"Paris, France",48.85658,2.35183
+8,Moncton,Canada,"Moncton, Canada",46.097995,-64.80011
+9,"Amherst, MA",United States,"Amherst, MA, United States",42.368566,-72.505714
+10,"Washington, DC",United States,"Washington, DC, United States",38.895037,-77.036543
+11,Buenos Aires,Argentina,"Buenos Aires, Argentina",-34.59972,-58.38194
+12,Scarborough,Canada,"Scarborough, Canada",43.7729,-79.2576
+13,Santo Domingo,Dominican Republic,"Santo Domingo, Dominican Republic",18.49333,-69.86667
+14,Brighton,England,"Brighton, England",50.8220576,-0.140343
+15,"Brooklyn, NY",United States,"Brooklyn, NY, United States",40.652601,-73.949721
+16,Washington,United States,"Washington, United States",48.0250054263,-120.094292506456
+17,Praha,Czech Republic,"Praha, Czech Republic",50.087465,14.421253
+18,Trafalgar,Dominica,"Trafalgar, Dominica",15.32369403,-61.346793249
+19,Port-au-Prince,Haiti,"Port-au-Prince, Haiti",18.5473,-72.3396
+20,Pompano Beach,United States,"Pompano Beach, United States",26.23786,-80.124767
+21,Chapel Hill,United States,"Chapel Hill, United States",35.913154,-79.05578
+22,"New York, NY",Canada,"New York, NY, Canada",40.724703,-74.000962
+23,"Cameron, NC",United States,"Cameron, NC, United States",35.326823,-79.255303
+24,Madrid,Spain,"Madrid, Spain",40.416705,-3.703583
+25,"New Brunswick, NJ",United States,"New Brunswick, NJ, United States",40.486217,-74.451817
+26,"Bloomington, IN",United States,"Bloomington, IN, United States",39.16704,-86.534288
+27,Bridgetown,Barbados,"Bridgetown, Barbados",13.09611,-59.60833
+28,St. Michael,Barbados,"St. Michael, Barbados",13.11667,-59.6
+29,Leeds,England,"Leeds, England",53.797419,-1.543794
+30,Windsor,Canada,"Windsor, Canada",42.317099,-83.035343
+31,Glasgow,Scotland,"Glasgow, Scotland",55.860983,-4.248879
+32,Annandale-on-Hudson,United States,"Annandale-on-Hudson, United States",42.01287,-73.90819
+33,North Devon,England,"North Devon, England",51.104182,-3.952825
+34,"New York, NY",United States,"New York, NY, United States",40.76872225,-73.9826608125
+35,Port of Spain,Trinidad & Tobago,"Port of Spain, Trinidad & Tobago",10.660319,-61.511573
+36,Port-au- Prince,Haiti,"Port-au- Prince, Haiti",18.5473,-72.3396
+37,"Woodstock, NY",United States,"Woodstock, NY, United States",40.741801,-74.007492
+38,Tokyo,Japan,"Tokyo, Japan",35.6652065,139.7263785
+39,"Miami, FL",United States,"Miami, FL, United States",25.76513515625,-80.18537321875
+40,Westminster,England,"Westminster, England",51.497321,-0.137149
+41,Berlin,Germany,"Berlin, Germany",52.51667,13.38333
+42,,,"NA, NA",14.65,120.95
+43,Mexico City,Mexico,"Mexico City, Mexico",19.41944,-99.14556
+44,Caracas,Venezuela,"Caracas, Venezuela",10.5,-66.93333
+45,Málaga,Spain,"Málaga, Spain",36.721303,-4.421637
+46,Saint-Nazaire,France,"Saint-Nazaire, France",47.273957,-2.232074
+47,Darmstadt,Germany,"Darmstadt, Germany",49.872775,8.651177
+48,Frankfurt,Germany,"Frankfurt, Germany",50.110644,8.682092
+49,Beograd,Serbia,"Beograd, Serbia",44.817813,20.456897
+50,Bucuresti,Romania,"Bucuresti, Romania",44.436141,26.10272
+51,Helsinki,Finland,"Helsinki, Finland",60.167488,24.942747
+52,Rio de Janeiro,Brazil,"Rio de Janeiro, Brazil",-22.911,-43.2094
+53,Castries,St. Lucia,"Castries, St. Lucia",14.01667,-60.98333
+54,Havana,Cuba,"Havana, Cuba",23.101612,-82.321534
+55,Nürnberg,Germany,"Nürnberg, Germany",49.453872,11.077298
+56,Homebush West,Australia,"Homebush West, Australia",-33.868,151.071
+57,Ontario,Canada,"Ontario, Canada",49.4515636581,-84.2539813003493
+58,"Boston, MA",United States,"Boston, MA, United States",42.360253,-71.058291
+59,Cambridge,England,"Cambridge, England",52.216192,0.207034
+60,Mona,Jamaica,"Mona, Jamaica",43.080048,-70.723329
+61,Albuquerque,United States,"Albuquerque, United States",35.084103,-106.650985
+62,Amherst,United States,"Amherst, United States",42.978392,-78.799762
+63,Hanover,United States,"Hanover, United States",39.192885,-76.724137
+64,San Juan,Puerto Rico,"San Juan, Puerto Rico",18.465299,-66.116666
+65,Michigan,United States,"Michigan, United States",44.93374589245,-84.525239999781
+66,St. Augustine,Trinidad & Tobago,"St. Augustine, Trinidad & Tobago",10.638541,-61.402303
+67,"Tulsa, OK",United States,"Tulsa, OK, United States",36.155681,-95.992911
+68,Bloomington,United States,"Bloomington, United States",39.16704,-86.534288
+69,Milan,Italy,"Milan, Italy",45.4668,9.1905
+70,Toronto,Canada,"Toronto, Canada",43.653482,-79.383935
+71,Basseterre,St. Kitts & Nevis,"Basseterre, St. Kitts & Nevis",17.29833,-62.73417
+72,Geneva,Switzerland,"Geneva, Switzerland",46.201756,6.146601
+73,Havana,Spain,"Havana, Spain",38.376736,-0.422112
+74,Seville,Spain,"Seville, Spain",37.38863,-5.99534
+75,Vedado,Cuba,"Vedado, Cuba",10.37,123.94
+76,Rosario,Argentina,"Rosario, Argentina",-32.95,-60.65
+77,Bogotá,Columbia,"Bogotá, Columbia",4.59889,-74.08083
+78,"Alexandria, VA",United States,"Alexandria, VA, United States",38.80511,-77.047023
+79,Sana Cruz,Trinidad & Tobago,"Sana Cruz, Trinidad & Tobago",10.714259,-61.476493
+80,"Minneapolis, MN",United States,"Minneapolis, MN, United States",44.9773,-93.265469
+81,"Madison, WI",United States,"Madison, WI, United States",43.074761,-89.383761
+82,"Ann Arbor, MI",United States,"Ann Arbor, MI, United States",42.268157,-83.731229
+83,"Middletown, CT",United States,"Middletown, CT, United States",41.562318,-72.650906
+84,"Providence, RI",United States,"Providence, RI, United States",41.823989,-71.412834
+85,Philipsburg,St. Maarten,"Philipsburg, St. Maarten",51.8547759,12.0396978
+86,Cave Hill,Barbados,"Cave Hill, Barbados",13.334598,-59.613294
+87,Ann Arbor,United States,"Ann Arbor, United States",42.268157,-83.731229
+88,Baltimore,United States,"Baltimore, United States",39.290882,-76.610759
+89,Norman,United States,"Norman, United States",35.222572,-97.439482
+90,Hudson,United States,"Hudson, United States",28.361771,-82.693285
+91,Bremen,Germany,"Bremen, Germany",53.07582,8.807165
+92,Harlow,England,"Harlow, England",51.767619,0.097489
+93,Ealing,England,"Ealing, England",51.512655,-0.305195
+94,Leuven,Belgium,"Leuven, Belgium",50.879202,4.701167
+95,Plounéour-Ménez,France,"Plounéour-Ménez, France",48.439236,-3.893769
+96,"Montréal, QC",Canada,"Montréal, QC, Canada",45.497216,-73.610364
+97,Cromer,England,"Cromer, England",52.931137,1.301276
+98,Staten Island,United States,"Staten Island, United States",40.583456,-74.149605
+99,Springfield,United States,"Springfield, United States",37.216678,-93.292037
+100,Lanham,United States,"Lanham, United States",38.967055,-76.861917
+101,St. Clair,Trinidad & Tobago,"St. Clair, Trinidad & Tobago",10.668462,-61.522605
+102,Leicester,England,"Leicester, England",52.583343,-1.1626783
+103,"Montréal, QC",Canada,"Montréal, QC, Canada",45.497216,-73.610364
+104,Kourou,French Guiana,"Kourou, French Guiana",5.15833,-52.64278
+105,Montevideo,Uraguay,"Montevideo, Uraguay",-34.888455,-56.074116000000004
+106,Berkeley,United States,"Berkeley, United States",37.870839,-122.272863
+107,Bogota,Colombia,"Bogota, Colombia",4.59889,-74.08083
+108,,Spain,"NA, Spain",35.100681116,74.801212326
+109,São Paulo,Brazil,"São Paulo, Brazil",-23.5507,-46.6334
+110,Esplugues de Llobregat,Spain,"Esplugues de Llobregat, Spain",41.37768,2.089972
+111,Georgetown,Guyana,"Georgetown, Guyana",6.78333,-58.16667
+112,Manchester,England,"Manchester, England",53.478265,-2.248272
+113,"Berkley, CA",United States,"Berkley, CA, United States",37.870839,-122.272863
+114,Bukarest,Romania,"Bukarest, Romania",44.436141,26.10272
+115,"San Francisco, CA",United States,"San Francisco, CA, United States",37.779026,-122.419906
+116,Tulsa,United States,"Tulsa, United States",36.155681,-95.992911
+117,Palermo,Italy,"Palermo, Italy",38.111227,13.352443
+118,Poitiers,France,"Poitiers, France",46.58026,0.340196
+119,Tres Cantos,Spain,"Tres Cantos, Spain",40.606583,-3.706533
+120,"Lutz, FL",United States,"Lutz, FL, United States",28.151124,-82.461483
+121,Tafalla,Spain,"Tafalla, Spain",42.527828,-1.674482
+122,Santiago,Chile,"Santiago, Chile",-33.45,-70.66667
+123,"Chapel Hill, NC",United States,"Chapel Hill, NC, United States",35.913154,-79.05578
+124,Matoury,French Guiana,"Matoury, French Guiana",4.85056,-52.33111
+125,"Oakland, CA",United States,"Oakland, CA, United States",37.804456,-122.271356
+126,Fort-de-France,Martinique,"Fort-de-France, Martinique",14.60722,-61.06944
+127,"Charlottesville, VA",United States,"Charlottesville, VA, United States",38.029306,-78.476678
+128,Munich,Germany,"Munich, Germany",48.137108,11.575382
+129,Hexham,England,"Hexham, England",54.971478,-2.101793
+130,"Stanford, CA",United States,"Stanford, CA, United States",37.427467,-122.170245
+131,"Pasadena, CA",United States,"Pasadena, CA, United States",34.147645,-118.144478
+132,"Durham, NC",England,"Durham, NC, England",54.788141,-1.54242
+133,"Lincoln, NE",United States,"Lincoln, NE, United States",40.808886,-96.707775
+134,Waterloo,Canada,"Waterloo, Canada",43.46527,-80.522296
+135,"Urbana, IL",United States,"Urbana, IL, United States",40.111717,-88.207301
+136,"Somerville, MA",United States,"Somerville, MA, United States",42.387597,-71.099497
+137,Vigo,Spain,"Vigo, Spain",42.23766,-8.724721
+138,Markham,Canada,"Markham, Canada",43.856371,-79.337682
+139,Don Mills,Canada,"Don Mills, Canada",43.7372,-79.3433
+140,Dublin,Ireland,"Dublin, Ireland",53.349765,-6.260273
+141,Wildey,Barbados,"Wildey, Barbados",13.1787146900535,-59.5619546611369
+142,Pictou,Canada,"Pictou, Canada",45.67772,-62.708221
+143,Pointe-À-Pitre,Guadeloupe,"Pointe-À-Pitre, Guadeloupe",16.24111,-61.53306
+144,"New York, NY",United States,"New York, NY, United States",40.76872225,-73.9826608125
+145,Haarlem,Netherlands,"Haarlem, Netherlands",52.388532,4.638805
+146,Amsterdam,Netherlands,"Amsterdam, Netherlands",52.37276,4.893604
+147,Manhattan,United States,"Manhattan, United States",40.789624,-73.959894
+148,"Boulder, CO",United States,"Boulder, CO, United States",40.014986,-105.270545
+149,Köln,Germany,"Köln, Germany",50.938361,6.959974
+150,Berlin Verl,Germany,"Berlin Verl, Germany",52.57309665,13.50063255
+151,Roma,Italy,"Roma, Italy",41.89332,12.482932
+152,Oslo,Norway,"Oslo, Norway",59.91111,10.75278
+153,München,Germany,"München, Germany",48.137108,11.575382
+154,Murska Sobota,Slovenia,"Murska Sobota, Slovenia",46.658,16.1651
+155,Helsingissä Hki,Finland,"Helsingissä Hki, Finland",48.856646,-93.91535
+156,Penhook,United States,"Penhook, United States",36.982366,-79.628085
+157,Messina,Italy,"Messina, Italy",38.193757,15.554208
+158,"Seattle, WA",United States,"Seattle, WA, United States",47.603832,-122.330062
+159,Sebastopol,United States,"Sebastopol, United States",38.402113,-122.824267
+160,Speightstown,Barbados,"Speightstown, Barbados",13.25444,-59.64083
+161,Chicago,United States,"Chicago, United States",41.875562,-87.624421
+162,"Chicago, IL",United States,"Chicago, IL, United States",41.875562,-87.624421
+163,Delaware,United States,"Delaware, United States",38.9978781537,-75.5055627423557
+164,Amsterdam,Neverlands,"Amsterdam, Neverlands",52.363911,4.908059
+165,Düsseldorf,Germany,"Düsseldorf, Germany",51.225402,6.776314
+166,Montréal,Canada,"Montréal, Canada",45.497216,-73.610364
+167,Casale Monferrato,Italy,"Casale Monferrato, Italy",45.136266,8.449813
+168,Holon,Israel,"Holon, Israel",32.01667,34.76667
+169,Budapest,Hungary,"Budapest, Hungary",47.49833,19.04083
+170,Stockholm,Sweden,"Stockholm, Sweden",59.325117,18.071093
+171,Jyväskylä,Finland,"Jyväskylä, Finland",62.2393,25.745951
+172,Tel Aviv,Israel,"Tel Aviv, Israel",32.088545,34.78254
+173,Newark,United States,"Newark, United States",40.735657,-74.172367
+174,Diego Martin,Trinidad & Tobago,"Diego Martin, Trinidad & Tobago",10.687866,-61.615387
+175,"Portland, OR",United States,"Portland, OR, United States",45.520247,-122.674195
+176,Portland,United States,"Portland, United States",45.520247,-122.674195
+177,"Lexington, MA",United States,"Lexington, MA, United States",42.447318,-71.2245
+178,Schleswig-Holstein,Germany,"Schleswig-Holstein, Germany",54.47004,9.51416
+179,"Los Angeles, CA",United States,"Los Angeles, CA, United States",34.053691,-118.242766
+180,Simsbury,United States,"Simsbury, United States",41.875915,-72.801221
+181,Fort-de France,Martinique,"Fort-de France, Martinique",14.60722,-61.06944
+182,Nendeln,Liechtenstein,"Nendeln, Liechtenstein",48.222271,16.3598855
+183,Cambridge,United States,"Cambridge, United States",42.3751,-71.105616
+184,Le Lamentin,Martinique,"Le Lamentin, Martinique",14.61528,-61.00194
+185,Peterborough,Canada,"Peterborough, Canada",44.304801,-78.31995
+186,Lewiston,United States,"Lewiston, United States",44.100351,-70.214776
+187,Roseau,Dominica,"Roseau, Dominica",15.298462216,-61.387504907
+188,"Long Grove, IL",United States,"Long Grove, IL, United States",42.178358,-87.997852
+189,Hamilton,Bermuda,"Hamilton, Bermuda",32.301136,-64.793053
+190,Cardiff,Wales,"Cardiff, Wales",51.481655,-3.179193
+191,Scotts Valley,United States,"Scotts Valley, United States",37.05106,-122.014684
+192,Burton,United States,"Burton, United States",42.989733,-83.633503
+193,Santiago,Cuba,"Santiago, Cuba",-33.440693,-70.646055
+194,Matanzas,Cuba,"Matanzas, Cuba",23.0511,-81.5753
+195,Honfleur,Frane,"Honfleur, Frane",49.419722,0.233889
+196,Aarhus,Denmark,"Aarhus, Denmark",56.149628,10.213405
+197,Leatherhead,England,"Leatherhead, England",51.295504,-0.329369
+198,Liverpool,England,"Liverpool, England",53.407199,-2.99168
+199,La Roque-d'Anthéron,France,"La Roque-d'Anthéron, France",43.715096,5.312221
+200,Rijswijk,Netherlands,"Rijswijk, Netherlands",52.044627,4.318821
+201,Matoury,Guyana,"Matoury, Guyana",4.85056,-52.33111
+202,"Holiday, FL",United States,"Holiday, FL, United States",28.18779,-82.739545
+203,Pinar del Río,Cuba,"Pinar del Río, Cuba",23.141907,-82.374474
+204,Guayaquil,Ecuador,"Guayaquil, Ecuador",-2.18333,-79.88333
+205,Holguín,Cuba,"Holguín, Cuba",20.64,-74.9175
+206,Leiden,Netherlands,"Leiden, Netherlands",52.159475,4.490884
+207,Puebla,Mexico,"Puebla, Mexico",19.05139,-98.21778
+208,Camaguey,Cuba,"Camaguey, Cuba",21.37861,-77.91861
+209,Paraná,Brazil,"Paraná, Brazil",-24.431337262,-51.6317605309439
+210,Oxfordshire,England,"Oxfordshire, England",51.8333,-1.25
+211,Willimantic,United States,"Willimantic, United States",41.713125,-72.217885
+212,Copenhagen,Denmark,"Copenhagen, Denmark",55.686724,12.570072
+213,Basingstoke,England,"Basingstoke, England",51.262826,-1.086198
+214,Göttingen,Germany,"Göttingen, Germany",51.532833,9.935181
+215,"Cleveland, OH",United States,"Cleveland, OH, United States",41.505161,-81.693445
+216,Charles Village,United States,"Charles Village, United States",39.321683,-76.616785
+217,"San Antonio, TX",United States,"San Antonio, TX, United States",29.4246,-98.495141
+218,Surrey,England,"Surrey, England",51.25,-0.3333
+219,Woodbridge,United States,"Woodbridge, United States",38.658172,-77.249705
+220,Jupiter,United States,"Jupiter, United States",26.934225,-80.094209
+221,Austin,United States,"Austin, United States",30.271129,-97.7437
+222,"Coconut Creek, FL",United States,"Coconut Creek, FL, United States",26.251748,-80.178935
+223,Basseterre,St. Kitts,"Basseterre, St. Kitts",17.29833,-62.73417
+224,Largo,United States,"Largo, United States",27.909467,-82.787324
+225,"Fairfax, VA",United States,"Fairfax, VA, United States",38.846224,-77.306373
+226,San Juan,Trinidad & Tobago,"San Juan, Trinidad & Tobago",10.645622,-61.460494
+227,The Morne,St. Lucia,"The Morne, St. Lucia",51.949921,11.556901
+228,"Evanston, IL",United States,"Evanston, IL, United States",42.044739,-87.693046
+229,Melbourne,Australia,"Melbourne, Australia",-37.8142,144.9632
+230,"Baltimore, MD",United States,"Baltimore, MD, United States",39.290882,-76.610759
+231,San Fernando,Trinidad & Tobago,"San Fernando, Trinidad & Tobago",10.280098,-61.454059
+232,Portsmouth,Dominica,"Portsmouth, Dominica",16.41,120.58
+233,Jackson,United States,"Jackson, United States",42.246504,-84.401696
+234,Walton-on-Thames,England,"Walton-on-Thames, England",51.385684,-0.419814
+235,Oakland,United States,"Oakland, United States",37.804456,-122.271356
+236,Old Saybrook,United States,"Old Saybrook, United States",41.291765,-72.376196
+237,Modena,Italy,"Modena, Italy",44.645889,10.925571
+238,Burbank,United States,"Burbank, United States",34.181648,-118.325855
+239,Chengdu,China,"Chengdu, China",30.66361,104.06667
+240,"Thousand Oaks, CA",United States,"Thousand Oaks, CA, United States",34.170561,-118.837594
+241,Crows Nest,Australia,"Crows Nest, Australia",-33.8261,151.205
+242,Carlsbad,United States,"Carlsbad, United States",33.158093,-117.350597
+243,Tunapuna,Trinidad & Tonbago,"Tunapuna, Trinidad & Tonbago",10.591053,-61.343728
+244,Parker,United States,"Parker, United States",39.518451,-104.761264
+245,Portsmouth,United States,"Portsmouth, United States",36.84442,-76.3533
+246,Wilmore,United States,"Wilmore, United States",37.864041,-84.660199
+247,D'Abadie,Trinidad & Tobago,"D'Abadie, Trinidad & Tobago",10.687866,-61.615387
+248,Peterborough,England,"Peterborough, England",52.572577,-0.242734
+249,Tunapuna,Trinidad & Tobago,"Tunapuna, Trinidad & Tobago",10.591053,-61.343728
+250,"Westminster, LDN",England,"Westminster, LDN, England",52.7684313,-0.3867413
+251,,France,"NA, France",39.470182,-0.375573
+252,Pretoria,South Africa,"Pretoria, South Africa",-25.7484,28.154
+253,"Philadelphia, PA",United States,"Philadelphia, PA, United States",39.952724,-75.163526
+254,"Clarion, PA",United States,"Clarion, PA, United States",41.214898,-79.385705
+255,"Lehigh Acres, FL",United States,"Lehigh Acres, FL, United States",26.609151,-81.652407
+256,"Kansas City, MO",United States,"Kansas City, MO, United States",39.100105,-94.578142
+257,Osnabrück,Germany,"Osnabrück, Germany",52.27196,8.047635
+258,"Scott's Valley, CA",United States,"Scott's Valley, CA, United States",37.05106,-122.014684
+259,"Harmondsworth, LDN",England,"Harmondsworth, LDN, England",51.4893348,-0.466414
+260,Concord,Canada,"Concord, Canada",43.802557,-79.472085
+261,Caernarfon,Wales,"Caernarfon, Wales",53.139436,-4.276975
+262,"Portsmouth, NH",United States,"Portsmouth, NH, United States",43.070222,-70.754862
+263,Brisbane,Australia,"Brisbane, Australia",-27.469,153.0235
+264,"Rochester, NY",United States,"Rochester, NY, United States",43.157285,-77.615214
+265,"Warners Bay, N.S.W.",Australia,"Warners Bay, N.S.W., Australia",-32.974135,151.645721
+266,"Hauppauge, NY",United States,"Hauppauge, NY, United States",40.825654,-73.202614
+267,"Manchester,UK",England,"Manchester,UK, England",53.478265,-2.248272
+268,"Farnham, UK",England,"Farnham, UK, England",51.220816,-0.799738
+269,Saarbrücken,Germany,"Saarbrücken, Germany",49.234362,6.996379
+270,Il-Blata l-Bajda,Malta,"Il-Blata l-Bajda, Malta",40.1492928594,-89.2749461071049
+271,"Markham, ON",Canada,"Markham, ON, Canada",43.856371,-79.337682
+272,Aylesbury,England,"Aylesbury, England",51.816141,-0.813038
+273,"Concord, ON",Canada,"Concord, ON, Canada",43.802557,-79.472085
+274,Canberra,Australia,"Canberra, Australia",-35.2819,149.1289
+275,"Rockville, MD",United States,"Rockville, MD, United States",39.081799,-77.151684
+276,"Mahwah, NJ",United States,"Mahwah, NJ, United States",41.088707,-74.143755
+277,"Bothell, WA",United States,"Bothell, WA, United States",47.75987,-122.206829
+278,"San Diego, CA",United States,"San Diego, CA, United States",32.71742,-117.162773
+279,"Morrisville, NC",United States,"Morrisville, NC, United States",35.824341,-78.830032
+280,"Hoboken, NJ",United States,"Hoboken, NJ, United States",40.743307,-74.032375
+281,"Red Bank, NJ",United States,"Red Bank, NJ, United States",40.347054,-74.064307
+282,Bristol,England,"Bristol, England",51.453802,-2.597299
+283,,Trinidad & Tobago,"NA, Trinidad & Tobago",40.50432064193,-3.38411516878311
+284,"Greenville, NC",United States,"Greenville, NC, United States",35.613224,-77.372459
+285,"Crawley, SX",England,"Crawley, SX, England",50.8011695,0.2729694
+286,Houten,Netherlands,"Houten, Netherlands",52.027123,5.161824
+287,,England,"NA, England",38.12866,-88.776255
+288,Hki,Finland,"Hki, Finland",48.856646,-93.91535
+289,Stuttgart,Germany,"Stuttgart, Germany",48.778449,9.180013
+290,Zürich,Switzerland,"Zürich, Switzerland",47.374449,8.541042
+291,,Germany,"NA, Germany",34.914085,-83.42151
+292,Novara,Italy,"Novara, Italy",45.446404,8.619655
+293,Zurich,Switzerland,"Zurich, Switzerland",47.374449,8.541042
+294,"Northampton, MA",United States,"Northampton, MA, United States",42.317899,-72.631101
+295,"Washington, D.C",United States,"Washington, D.C, United States",38.895037,-77.036543
+296,"Ashland, OR",United States,"Ashland, OR, United States",42.197249,-122.7154
+297,Milano,Italy,"Milano, Italy",45.4668,9.1905
+298,"Gainesville, FL",United States,"Gainesville, FL, United States",29.651968,-82.324985
+299,Leeeds,England,"Leeeds, England",53.797419,-1.543794
+300,"Toronto, ON",Canada,"Toronto, ON, Canada",43.653482,-79.383935
+301,"University of Miami, MIA",United States,"University of Miami, MIA, United States",25.7204805,-80.2784505
+302,"Chapel Hill,NC",United States,"Chapel Hill,NC, United States",35.913154,-79.05578
+303,"Sudbury, ON",Canada,"Sudbury, ON, Canada",46.49272,-80.991211
+304,Edmonton,Canada,"Edmonton, Canada",53.535411,-113.507996
+305,Heidelberg,Germany,"Heidelberg, Germany",49.409358,8.694724
+306,London,United Kingdom,"London, United Kingdom",51.507322,-0.127647
+307,Kingston,Jamaica,#REF!,N/A,N/A
+308,"Ann Arbor, MI",United States,"Kingston, United States",41.480379,-71.52256
+309,Harlow,United Kingdom,"Harlow, United Kingdom",51.767619,0.097489
+310,"Westminster, LDN",United Kingdom,"Westminster, LDN, United Kingdom",52.7684313,-0.3867413
+311,Edinburgh,England,"Edinburgh, England",52.4851862,1.7528734
+312,Paramaribo,Suriname,"Paramaribo, Suriname",5.86667,-55.16667
+313,"Port Hawkesbury, NS",Canada,"Port Hawkesbury, NS, Canada",45.618085,-61.357459
+314,Gloucester,England,"Gloucester, England",51.865371,-2.245819
+315,"Princeton, NJ",United States,"Princeton, NJ, United States",40.349274,-74.659296
+316,"West Port, CT",United States,"West Port, CT, United States",40.10635,-86.035005
+317,"Cambridge, MA",United States,"Cambridge, MA, United States",42.3751,-71.105616
+318,Vaduz,Liechtenstein,"Vaduz, Liechtenstein",47.13972,9.52194
+319,México City,Mexico,"México City, Mexico",19.41944,-99.14556
+320,Santa Clara,Cuba,"Santa Clara, Cuba",22.40667,-79.95306
+321,,Mexico,"NA, Mexico",21.8823159651,-104.867202769435
+322,Saint Petersburg,Russia,"Saint Petersburg, Russia",59.95,30.31667
+323,"Westport, CT",United States,"Westport, CT, United States",41.141486,-73.357896
+324,"New Orleans, LA",United States,"New Orleans, LA, United States",29.949932,-90.070116
+325,Galisteo,Spain,"Galisteo, Spain",39.975984,-6.267751
+326,Castries,Cuba,"Castries, Cuba",-23.8858,-46.4242
+327,"Haarlem, NH",Netherlands,"Haarlem, NH, Netherlands",52.422715499999995,4.6492415000000005
+328,"Vancouver, BC",Canada,"Vancouver, BC, Canada",49.279862,-123.116838
+329,Bornheim,Germany,"Bornheim, Germany",50.12861,8.71167
+330,Sassari,Italy,"Sassari, Italy",40.723264,8.561007
+331,"Lake County, IL",United States,"Lake County, IL, United States",42.323656,-88.015061
+332,"Nashville, TN",United States,"Nashville, TN, United States",36.162277,-86.774298
+333,Kirklees,England,"Kirklees, England",52.602052,1.2800194
+334,"Lanham, MD",United States,"Lanham, MD, United States",38.967055,-76.861917
+335,"Detroit, MI",United States,"Detroit, MI, United States",42.331551,-83.04664
+336,"Pittsburgh, PA",United States,"Pittsburgh, PA, United States",40.441694,-79.990086
+337,"Old Westbury, NY",United States,"Old Westbury, NY, United States",40.788711,-73.599572
+338,"Columbia, MO",United States,"Columbia, MO, United States",38.951883,-92.333737
+339,"Eastford, CT",United States,"Eastford, CT, United States",41.902068,-72.07991
+340,"Mineola, N.Y",United States,"Mineola, N.Y, United States",40.749268,-73.640685
+341,"Victoria, BC",Canada,"Victoria, BC, Canada",48.428318,-123.364953
+342,"Prince Frederick, MD",United States,"Prince Frederick, MD, United States",38.5404,-76.584402
+343,Fontabelle,Barbados,"Fontabelle, Barbados",13.1787146900535,-59.5619546611369
+344,"Winston-Salem, NC",United States,"Winston-Salem, NC, United States",36.099813,-80.244052
+345," New Haven, CT",United States," New Haven, CT, United States",41.433955,-82.07021
+346,Petit-Bourg,Guadeloupe,"Petit-Bourg, Guadeloupe",16.19139,-61.59028
+347,"Berkeley, CA",United States,"Berkeley, CA, United States",37.870839,-122.272863
+348,Rome,Italy,"Rome, Italy",41.89332,12.482932
+349,"Chatham, NJ",United States,"Chatham, NJ, United States",40.740924,-74.383671
+350,Auckland,New Zealand,"Auckland, New Zealand",-36.852095,174.76318
+351,Moskva,Russia,"Moskva, Russia",55.169928,61.391955
+352,Edinburgh,Scotland,"Edinburgh, Scotland",55.927625,-3.233537
+353,Quezon City,Philippines,"Quezon City, Philippines",14.63333,121.03333
+354,Bath,England,"Bath, England",51.384167,-2.360052
+355,"Garden City, NY",United States,"Garden City, NY, United States",40.726648,-73.634305
+356,"Tempe, AZ",United States,"Tempe, AZ, United States",33.425506,-111.940009
+357,Ciego de Ávila,Cuba,"Ciego de Ávila, Cuba",21.8481,-78.7631
+358,,Barbados,"NA, Barbados",38.5790643092167,-0.132815304107615
+359,"Franklin Center, PA",United States,"Franklin Center, PA, United States",39.846872,-75.710775
+360,Hamburg,Germany,"Hamburg, Germany",53.55,10
+361,Köln,Germany,"Köln, Germany",50.938361,6.959974
+362,Tel-Aviv,Israel,"Tel-Aviv, Israel",32.088545,34.78254
+363,Seoul,South Korea,"Seoul, South Korea",37.58333,127
+364,Tehran,Iran,"Tehran, Iran",35.696,51.401
+365,Warszawa,Poland,"Warszawa, Poland",53.982974,17.3995105
+366,Helsingissä,Finland,"Helsingissä, Finland",62.7777539652943,26.199539005192
+367,"Helsingissä, Hki",Finland,"Helsingissä, Hki, Finland",48.856646,-93.91535
+368,Tōkyō,Japan,"Tōkyō, Japan",35.6652065,139.7263785
+369,"Harmondsworth, LDN, LDN",England,"Harmondsworth, LDN, LDN, England",51.4893348,-0.466414
+370,Shīrāz,Iran,"Shīrāz, Iran",29.6,52.51667
+371,Tallinn,Estonia,"Tallinn, Estonia",59.437216,24.745369
+372,Höganäs,Höganäs,"Höganäs, Höganäs",56.206501,12.555932
+373,Istanbul,Turkey,"Istanbul, Turkey",41.01,28.96028
+374,Gornji Milanovac,Serbia,"Gornji Milanovac, Serbia",44.024316,20.460038
+375,"Cheyenne, WY",United States,"Cheyenne, WY, United States",41.139981,-104.820246
+376,Dijon,France,"Dijon, France",47.321581,5.04147
+377,Sãu Paulo,Brazil,"Sãu Paulo, Brazil",-23.585244,-46.723191
+378,St. John's,Antigua & Barbuda,"St. John's, Antigua & Barbuda",17.124304,-61.848624
+379,"Tuscon, AZ",United States,"Tuscon, AZ, United States",32.222877,-110.974848
+380,"Kingston, JAM",Jamaica,"Kingston, JAM, Jamaica",17.964814,-76.791685
+381,"Emeryville, CA",United States,"Emeryville, CA, United States",37.831409,-122.286527
+382,Guadalajara,Mexico,"Guadalajara, Mexico",20.66611,-103.35194
+383,Zürich,Switzerland,"Zürich, Switzerland",47.374449,8.541042
+384,Paris,France,#REF!,N/A,N/A
+385,Bogotá,Colombia,"Bogotá, Colombia",4.59889,-74.08083
+386,México City,Mexico,"México City, Mexico",19.41944,-99.14556
+387,Alfragide,Portugal,"Alfragide, Portugal",38.735,-9.22
+388,Kraków,Poland,"Kraków, Poland",50.061947,19.936856
+389,Lima,Peru,"Lima, Peru",-12,-76.8333
+390,Zürich,Switszerland,"Zürich, Switszerland",47.374449,8.541042
+391,"Indianapolis, IN",United States,"Indianapolis, IN, United States",39.768333,-86.15835
+392,"Princeton, NJ",New Jersey,"Princeton, NJ, New Jersey",40.29674,-74.59203
+393,Yorkshire,England,"Yorkshire, England",51.5133883,-0.0379756
+394,"Scotts Valley, CA",United States,"Scotts Valley, CA, United States",37.05106,-122.014684
+395,"Los Gatos, CA",United States,"Los Gatos, CA, United States",37.226611,-121.97468
+396,Oxford,United States,"Oxford, United States",34.366377,-89.518766
+397,Breda,Netherlands,"Breda, Netherlands",51.588785,4.776024
+398,Den Haag,Netherlands,"Den Haag, Netherlands",52.079984,4.311346
+399,"Springfield, OH",United States,"Springfield, OH, United States",39.923405,-83.810138
+400,Ambergate,England,"Ambergate, England",53.058156,-1.482032
+401,"Brantford, ON",Canada,"Brantford, ON, Canada",43.140816,-80.263173
+402,Bern,Switzerland,"Bern, Switzerland",46.948271,7.451451
+403,Riga,Latvia,"Riga, Latvia",56.9475,24.10694
+404,Lisbon,Portugal,"Lisbon, Portugal",38.7263,-9.1484
+405,Stuggart,Germany,"Stuggart, Germany",48.170531,9.639149
+406,Reggio Emilia,Italy,"Reggio Emilia, Italy",44.697839,10.630497
+407,Napoli,Italy,"Napoli, Italy",40.835934,14.248783
+408,"New York, NY",New York,"New York, NY, New York",40.76872225,-73.9826608125
+409,Lund,Sweden,"Lund, Sweden",55.70293,13.192945
+410,Leipzig,Germany,"Leipzig, Germany",51.340632,12.374733
+411,"Stuart, FL",United States,"Stuart, FL, United States",27.197983,-80.251918
+412,Lübeck,Germany,"Lübeck, Germany",53.866444,10.684738
+413,Santiago de Cuba,Cuba,"Santiago de Cuba, Cuba",20.0198,-75.8139
+414,São Paulo,Brazil,"São Paulo, Brazil",-23.5507,-46.6334
+415,"Hygiene, CO",United States,"Hygiene, CO, United States",40.188785,-105.178055
+416,Rennes,France,"Rennes, France",48.111339,-1.68002
+417,"Edinburg, TX",United States,"Edinburg, TX, United States",26.301398,-98.16245
+418,"Champaign, IL",United States,"Champaign, IL, United States",40.116484,-88.243093
+419,Baghdad,Iraq,"Baghdad, Iraq",33.35,44.41667
+420,Beijing,China,"Beijing, China",39.905,116.39139
+421,"Freeport, NY",United States,"Freeport, NY, United States",40.657607,-73.583583
+422,"North Stratford, NH",United States,"North Stratford, NH, United States",44.751762,-71.628569
+423,München,Germany,"München, Germany",48.137108,11.575382
+424,Athens,Greece,"Athens, Greece",37.99471,23.729531
+425,The Hague,Netherlands,"The Hague, Netherlands",52.079984,4.311346
+426,Athena,Greece,"Athena, Greece",36.386159,28.245077
+427,Krakow,Poland,"Krakow, Poland",50.061947,19.936856
+428,Firenze,Italy,"Firenze, Italy",43.769871,11.255576
+429,St.Thomas,Virgin Islands,"St.Thomas, Virgin Islands",17.7355381596591,-64.7625859114436
+430,Vienne,France,"Vienne, France",46.58139,0.34056
+431,Niort,France,"Niort, France",46.324113,-0.46494
+432,"Cooperstown, NY",United States,"Cooperstown, NY, United States",42.70063,-74.924321
+433,"City of Westminister, LDN",England,"City of Westminister, LDN, England",51.521049000000005,-0.1738305
+434,"Pompano Beach, FL",United States,"Pompano Beach, FL, United States",26.23786,-80.124767
+435,Jacmel,Haiti,"Jacmel, Haiti",18.2353,-72.5375
+436,"Lewiston, ID",United States,"Lewiston, ID, United States",46.419591,-117.021614
+437,"Newton, MA",United States,"Newton, MA, United States",42.337041,-71.209221
+438,"Normal, IL",United States,"Normal, IL, United States",40.509287,-88.98438
+439,Fredensborg,Denmark,"Fredensborg, Denmark",55.974,12.405062
+440,"Angola, NY",United States,"Angola, NY, United States",42.638393,-79.027816
+441,"San Franciso, CA",United States,"San Franciso, CA, United States",37.779026,-122.419906
+442,"South Ozone Park, NY",United States,"South Ozone Park, NY, United States",40.670104,-73.819023
+443,Caroni,Trinidad & Tobago,"Caroni, Trinidad & Tobago",10.687866,-61.615387
+444,"Whitefish, MT",United States,"Whitefish, MT, United States",48.410802,-114.334624
+445,"La Vergne, TN",United States,"La Vergne, TN, United States",36.015618,-86.581939
+446,New Delhi,India,"New Delhi, India",28.613895,77.209006
+447,"Thorofare, NJ",United States,"Thorofare, NJ, United States",39.842336,-75.196291
+448,"Lynn, MA",United States,"Lynn, MA, United States",42.466763,-70.949494
+449,"Frankfurt, MD",Spain,"Frankfurt, MD, Spain",42.568997,-0.548393
+450,Châlons,France,"Châlons, France",44.732347,0.021296
+451,"Austin, TX",United States,"Austin, TX, United States",30.271129,-97.7437
+452,"San Francisco,CA",United States,"San Francisco,CA, United States",37.779026,-122.419906
+453,Jerusalem,Israel,"Jerusalem, Israel",31.77331512,35.18679028
+454,,Haiti,"NA, Haiti",50.212253,30.321928
+455,Copenhagen,Denmark,#REF!,N/A,N/A
+456,Barcelona,Spain,#REF!,N/A,N/A
+457,,Poland,"NA, Poland",51.188881,3.499838
+458,Pittsburgh,United States,"Pittsburgh, United States",40.441694,-79.990086
+459,Minneapolis,United States,"Minneapolis, United States",44.9773,-93.265469
+460,Munchen,Germany,"Munchen, Germany",48.137108,11.575382
+461,Torino,Italy,"Torino, Italy",45.067755,7.682489
+462,Tartu,Estonia,"Tartu, Estonia",58.380121,26.72245
+463,"Kendrick, ID",United States,"Kendrick, ID, United States",46.61406,-116.646542
+464,Benin City,Nigeria,"Benin City, Nigeria",39.736724,-104.984669
+465,Abingdon,England,"Abingdon, England",51.671484,-1.277972
+466,London,Europe,"London, Europe",51.516108,-0.080926
+467,St. James,Barbados,"St. James, Barbados",13.21667,-59.61667
+468,Saint Croix,Virgin Islands,"Saint Croix, Virgin Islands",17.7789,-64.7455
+469,St. Peter,Barbados,"St. Peter, Barbados",13.25,-59.61667
+470,Rhyl,Wales,"Rhyl, Wales",53.320743,-3.490726
+471,"Manhattan, NY",United States,"Manhattan, NY, United States",40.789624,-73.959894
+472,Benque Viejo Del Carmen,Belize,"Benque Viejo Del Carmen, Belize",17.07351,-89.139191
+473,"Easthampton, MA",United States,"Easthampton, MA, United States",42.268927,-72.668804
+474,"Chico, CA",United States,"Chico, CA, United States",39.728495,-121.837478
+475,"Buffalo, NY",United States,"Buffalo, NY, United States",42.886717,-78.878392
+476,North Melbourne,Australia,"North Melbourne, Australia",-37.79917,144.94667
+477,Norderstedt,Germany,"Norderstedt, Germany",53.70899,9.989191
+478,"Watertown, MA",United States,"Watertown, MA, United States",42.37093,-71.182832
+479,"Brantford, ON","Brantford, ON","Brantford, ON, Brantford, ON",43.169325,-80.21686
+480,Perros-Guirec,France,"Perros-Guirec, France",48.815113,-3.439466
+481,"Durham, NC",United States,"Durham, NC, United States",35.996653,-78.901805
+482,Quebec,Canada,"Quebec, Canada",46.82596,-71.235223
+483,Léchelle,France,"Léchelle, France",47.121034,-1.50606
+484,Montrouge,France,"Montrouge, France",48.818854,2.319437
+485,Barcarena,Portugal,"Barcarena, Portugal",38.7316,-9.2781
+486,Taipei,Taiwan,"Taipei, Taiwan",25.03333,121.63333
+487,Tihrān,Iran,"Tihrān, Iran",35.696,51.401
+488,Baarn,Netherlands,"Baarn, Netherlands",52.21115,5.293091
+489,St. Mary,Jamaica,"St. Mary, Jamaica",18.31667,-76.9
+490,Gottingen,Germany,"Gottingen, Germany",51.532833,9.935181
+491,"Chelsea, VT",United States,"Chelsea, VT, United States",43.988862,-72.448654
+492,"Nueva York, NY",United States,"Nueva York, NY, United States",40.71314725,-74.00162725
+493,"North Andover, MA",United States,"North Andover, MA, United States",42.683989,-71.112707
+494,"Columbus, OH",United States,"Columbus, OH, United States",39.96226,-83.000707
+495,Philippines,Asia,"Philippines, Asia",8.947072,125.535636
+496,Brunswick,Australia,"Brunswick, Australia",-37.7667,144.963
+497,Denmark,Europe,"Denmark, Europe",55.6905,12.611049
+498,Daryaganj,India,"Daryaganj, India",28.550676,77.121923
+499,Thomaston,Maine,"Thomaston, Maine",44.07897,-69.18171
+500,Le Mans,France,"Le Mans, France",48.007385,0.196785
+501,Bridgend,Wales,"Bridgend, Wales",51.504984,-3.575667
+502,Haiti,Port-au-Prince,"Haiti, Port-au-Prince",18.5473,-72.3396
+503,"Dallas, TX",United States,"Dallas, TX, United States",32.776272,-96.796856
+504,Trier,Germany,"Trier, Germany",49.759621,6.644188
+505,Port-au-Prince,Haiti,#REF!,N/A,N/A
+506,Sonora,Mexico,"Sonora, Mexico",29.7447217307,-110.485388473413
+507,Carouge-Geneve,Switzerland,"Carouge-Geneve, Switzerland",46.184669,6.139684
+508,Ankara,Turkey,"Ankara, Turkey",39.920789,32.854048
+509,Erlandson,Denmark,"Erlandson, Denmark",55.9633978748347,10.0462968058278
+510,Muir of Ord,Scotland,"Muir of Ord, Scotland",57.517318,-4.456204
+511,"Port Townsend, WA",United States,"Port Townsend, WA, United States",48.118533,-122.767963
+512,"Fredericton, NB",Canada,"Fredericton, NB, Canada",45.966425,-66.645813
+513,"Spartanburg, SC",United States,"Spartanburg, SC, United States",34.949801,-81.932016
+514,Wuppertal,Germany,"Wuppertal, Germany",51.264018,7.178037
+515,Pessac,France,"Pessac, France",44.805615,-0.63084
+516,Bussum,Netherlands,"Bussum, Netherlands",52.277421,5.162746
+517,"Mineola, NY",United States,"Mineola, NY, United States",40.749268,-73.640685
+518,"Stratford, ON",Canada,"Stratford, ON, Canada",43.37009,-80.981802
+519,"Waterloo, ON",Canada,"Waterloo, ON, Canada",43.46527,-80.522296

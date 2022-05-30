@@ -17,7 +17,7 @@ def csv_to_json(csv_file_path, json_file_path):
 
             #assuming a column named 'No'
             #to be the primary key
-            key = lines[[0]]
+            key = lines['Author']
             data_dict[key] = lines
 
     #open a json file handler and use json.dumps

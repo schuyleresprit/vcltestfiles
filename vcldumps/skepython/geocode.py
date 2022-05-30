@@ -4,9 +4,9 @@ import json
 
 key = "pk.eyJ1Ijoic2NodXlsZXJlIiwiYSI6ImNsMjk4dHhsZTAxNGQzY3VwNnc1b2Z5d2MifQ.dFwDS9kaYpkp_GbJmN2QOg"
 
-addresses_df = pd.read_csv("vclpubplaces.csv")
+addresses_df = pd.read_csv("author_country.csv")
 
-addresses = addresses_df["pub_location"].values.tolist()
+addresses = addresses_df["Author Country"].values.tolist()
 latitudes = []
 longitudes = []
 
@@ -26,4 +26,4 @@ for address in addresses:
 addresses_df["Latitudes"] = latitudes
 addresses_df["Longitudes"] = longitudes
 
-addresses_df.to_csv("vclpubplaces_geocoded.csv")
+addresses_df.to_csv("ac-coded.csv")
