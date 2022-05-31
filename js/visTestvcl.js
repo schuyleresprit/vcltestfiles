@@ -287,53 +287,53 @@ class CreateMap {
 		function filter_data(){
 
 			//clear objects
-			languages = {};
-			languages_unique = {};
+			genres = {};
+			genres_unique = {};
 		//	trajectories = {};
 		//	trajectories_unique = {};
 
 			//INTERSECTIONS
 			//filter by date range
-			var holder = d3.entries(self.languages).filter(function(d){
-				var n = new Date(d.key);
-				return n >=self.date_start && n <=self.date_end;
-			});
+			//var holder = d3.entries(self.languages).filter(function(d){
+				//var n = new Date(d.key);
+				//return n >=self.date_start && n <=self.date_end;
+			//});
 			//get distinct places
 			//slot author IDs into place
 			//highest likelihood score wins
-			holder.forEach(function(d){
-				if(d3.keys(d.value).length >0){
-					d3.keys(d.value).forEach(function(_d){
-						if(!languages[_d]){
-							languages[_d] = {};
-							languages[_d].figures = {};
-						}
-						d.value[_d].forEach(function(__d){
-							if(!languages[_d].figures[__d.AuthorID] || languages[_d].figures[__d.AuthorID] >__d.Likelihood){
+		//	holder.forEach(function(d){
+				//if(d3.keys(d.value).length >0){
+					//d3.keys(d.value).forEach(function(_d){
+					//	if(!languages[_d]){
+						//	languages[_d] = {};
+						//	languages[_d].figures = {};
+						//}
+						//d.value[_d].forEach(function(__d){
+						//	if(!languages[_d].figures[__d.AuthorID] || languages[_d].figures[__d.AuthorID] >__d.Likelihood){
 								//languages[_d].figures[__d.AuthorID] = __d.Likelihood;
-							}
-						});
-					});
-				}
-			});
+						////	}
+						//});
+				///	});
+				//}
+			//});
 			//tally up totals
-			d3.keys(languages).forEach(function(d){
-				languages[d].lists = {};
-				languages[d].lists._01 = d3.values(languages[d].figures).filter(function(_d){ return _d === 1; });
-				languages[d].lists._02 = d3.values(languages[d].figures).filter(function(_d){ return _d === 2; });
-				languages[d].lists._03 = d3.values(languages[d].figures).filter(function(_d){ return _d === 3; });
-			});
+			//d3.keys(languages).forEach(function(d){
+			//	languages[d].lists = {};
+			//	languages[d].lists._01 = d3.values(languages[d].figures).filter(function(_d){ return _d === 1; });
+			//	languages[d].lists._02 = d3.values(languages[d].figures).filter(function(_d){ return _d === 2; });
+			//	languages[d].lists._03 = d3.values(languages[d].figures).filter(function(_d){ return _d === 3; });
+		//	});
 			//make list of unique intersections per place
-			holder.forEach(function(d){
-				d3.keys(d.value).forEach(function(_d){
-					if(!languages_unique[_d]){ languages_unique[_d] = []; }
-					d.value[_d].forEach(function(__d){
-						if(languages_unique[_d].filter(function(t){ return t.AuthorID === __d.AuthorID && t.EndDate === __d.EndDate; }).length === 0){
-							languages_unique[_d].push(__d);
-						}
-					});
-				});
-			});
+			//holder.forEach(function(d){
+			//	d3.keys(d.value).forEach(function(_d){
+			//		if(!languages_unique[_d]){ languages_unique[_d] = []; }
+			//		d.value[_d].forEach(function(__d){
+				//		if(languages_unique[_d].filter(function(t){ return t.AuthorID === __d.AuthorID && t.EndDate === __d.EndDate; }).length === 0){
+				//			languages_unique[_d].push(__d);
+					//	}
+					//});
+				//});
+		//	});
 
 			//TRAJECTORIES
 			holder.forEach(function(d){

@@ -1,27 +1,25 @@
 {
-  "name": "vcltestfiles",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "scripts": {
-    "test": "js.visTestvcl.js"
+  "dependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp-auto-task": "^0.0.0",
+    "gulp-tasks": "^0.0.2",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.1",
+    "leaflet": "^1.8.0",
+    "require-dir": "^1.2.0",
+    "run-sequence": "^2.2.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/schuyleresprit/vcltestfiles.git"
+  "name": "schuyleresprit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/schuyleresprit/vcltestfiles/issues"
-  },
-  "homepage": "https://github.com/schuyleresprit/vcltestfiles#readme",
-  "devDependencies": {
-    "gulp": "^4.0.2"
-  },
-  "dependencies": {
-    "git": "^0.1.5",
-    "gulp-git": "^2.10.1"
-  }
+  "description": ""
 }

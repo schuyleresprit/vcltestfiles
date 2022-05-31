@@ -232,8 +232,8 @@ svg {
 	cursor:pointer;
 }
 .points_g.focus_point .point {
-	fill:#33cbff;
-	stroke:#33cbff;
+	fill:#216b4d;
+	stroke:#216b4d;
 	stroke-width:1;
 	stroke-opacity:1;
 }
