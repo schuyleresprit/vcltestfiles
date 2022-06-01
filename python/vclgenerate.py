@@ -187,15 +187,18 @@ def process_author_files(csv_path, csv_list, geonames_username):
 						publications_by_timeline[row['Pubdate']] = []
 						timeline[date_id].append(author_publications)
 						row_index += 1
-						print(author_publications)
+						#print(author_publications)
 				for i in range (2):
-					print(author_publications)
-					if not row['Translation'] in translations:
-						translations[row['Translation']] = []
+					#print(author_publications)
+					#if not row['Translation'] in translations:
+					#	translations[row['Translation']] = []
 					if not row['Translation'] in publications_by_translation:
 						publications_by_translation[row['Translation']] = []
-						translations[translation_id].append(author_publications)
+						if translation_id == 'y':
+							#translations[translation_id].append(author_publications)
+							translations.setdefault(translation_id, []).append(author_publications)
 						row_index =+ 1
+
 	csv_file.close()
 
 	return author_ids, publications, places, countries, languages, genres, timeline, translations
