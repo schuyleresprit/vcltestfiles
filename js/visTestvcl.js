@@ -67,6 +67,7 @@ class CreateMap {
 	process_data(){
 		var self = this;
 
+
 		self.continents = self.data.continents;
 
 		d3.keys(self.data.countries).forEach(function(d){
