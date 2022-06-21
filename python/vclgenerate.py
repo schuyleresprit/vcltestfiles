@@ -112,7 +112,7 @@ def process_author_files(csv_path, csv_list, geonames_username):
 			for row in reader:
 
 				if not(row['Title'] == '' and row['Pubdate'] == '' and row['Language'] == '' and row['Genre'] == ''):
-					place_name = row['Pub_city'] + ', ' + row['Pub_country']
+					place_name = row['City'] + ', ' + row['Country']
 
 				if not place_name in places:
 					place_info = {}
@@ -209,7 +209,6 @@ def process_author_files(csv_path, csv_list, geonames_username):
 # ---------------
 csv_list = get_csv_list(CSV_LOCATION)
 author_ids, publications, places, countries,languages, genres, timeline, translations = process_author_files(CSV_LOCATION, csv_list, GEONAMES_USERNAME)
-#translations = get_translations(publications)
 
 with codecs.open(AUTHOR_ID_JSON, 'w', 'utf8') as f:
 	f.write(json.dumps(author_ids, sort_keys=True, indent=4, separators=(',', ': '), ensure_ascii=False))
