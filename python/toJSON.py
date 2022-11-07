@@ -24,5 +24,5 @@ def exportFile(_file):
 	jsonexp.write(jsonstr);
 	jsonexp.close();
 
-csv_file = 'places_GEOCODED'
+csv_file = 'vcl_author_info_new'
 exportFile(csv_file)
